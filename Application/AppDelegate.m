@@ -1,22 +1,46 @@
-//
-//  AppDelegate.m
-//  Application
-//
-//  Created by ABDUL MOIZ SHEIKH on 4/14/17.
-//  Copyright © 2017 2plebs. All rights reserved.
-//
-
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
-@end
+@end	
 
 @implementation AppDelegate
 
+@synthesize window = _window;
+@synthesize mainViewController = _mainViewController;
+@synthesize navigationMainController = _navigationMainController;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    // Create a screen object
+    UIScreen *screen = [UIScreen mainScreen];
+    
+    // Retrieve the bounds(height and width) from the screen object
+    CGRect viewRect = [screen bounds];
+    
+    // Main window object initialized with viewRect, window is a property inside UIWindow class
+    self.window = [[UIWindow alloc] initWithFrame:viewRect];
+    
+    // Create a new view controller for our main window
+    self.mainViewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    
+    // Main navigation controller for traversing
+    self.navigationMainController = [[UINavigationController alloc]
+                                         initWithRootViewController:self.mainViewController];
+    
+    // Assign our window a root view controller
+    self.window.rootViewController = self.navigationMainController;
+    
+    // Alternative to assigning root view controller
+//    [self.window setRootViewController:self.navigationMainController];
+    
+    // Responds to key preses
+    [self.window makeKeyAndVisible];
+    
+    NSLog(@"Width: %f, Height %f", viewRect.size.width, viewRect.size.height); // Simply prints the width and height
+    
     return YES;
 }
 

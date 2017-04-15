@@ -2,21 +2,16 @@
 //  ViewController.h
 //  Application
 //
-//  Created by ABDUL MOIZ SHEIKH on 4/14/17.
+//  Created by Abdul Moiz on 15/04/2017.
 //  Copyright © 2017 2plebs. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController{
-    
-    
-    IBOutlet UITextField *username;
-    IBOutlet UITextField *password;
+@interface ViewController : UIViewController
 
-}
+@property (nonatomic, readwrite, weak) IBOutlet UITextField *textField;
+@property (nonatomic, readwrite, weak) IBOutlet UIButton *button;
 
-- (IBAction)button:(id)sender;
-
+-(IBAction)buttonClicked:(id)sender;
 @end
-
