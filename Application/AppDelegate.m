@@ -1,5 +1,6 @@
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "LoginController.h"
+#import "SplashScreenViewController.h"
 
 @interface AppDelegate ()
 
@@ -7,12 +8,17 @@
 
 @implementation AppDelegate
 
-@synthesize window = _window;
-@synthesize mainViewController = _mainViewController;
-@synthesize navigationMainController = _navigationMainController;
+@synthesize window;
+@synthesize mainViewController;
+@synthesize navigationMainController;
+@synthesize splashScreenViewController;
 
+
+
+#pragma mark - Application State Change
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     
     // Create a screen object
     UIScreen *screen = [UIScreen mainScreen];
@@ -21,25 +27,44 @@
     CGRect viewRect = [screen bounds];
     
     // Main window object initialized with viewRect, window is a property inside UIWindow class
-    self.window = [[UIWindow alloc] initWithFrame:viewRect];
+    window = [[UIWindow alloc] initWithFrame:viewRect];
     
     // Create a new view controller for our main window
-    self.mainViewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    mainViewController = [[LoginController alloc]
+                               initWithNibName:@"LoginController"
+                               	bundle:nil];
+    
+    
+    // Create a new view controller for splash screen window
+    splashScreenViewController = [[SplashScreenViewController alloc]
+                                       initWithNibName:@"SplashScreenViewController"
+                                       bundle:nil];
     
     // Main navigation controller for traversing
-    self.navigationMainController = [[UINavigationController alloc]
+    navigationMainController = [[UINavigationController alloc]
                                          initWithRootViewController:self.mainViewController];
     
     // Assign our window a root view controller
-    self.window.rootViewController = self.navigationMainController;
+    window.rootViewController = self.splashScreenViewController;
+    
+    // Waits 1.5seconds for the splash screen
+    [NSTimer
+     scheduledTimerWithTimeInterval:1.5f
+     target:self
+     selector:@selector(onSplashScreenDone)
+     userInfo:nil
+     repeats:NO];
+    
+
     
     // Alternative to assigning root view controller
-//    [self.window setRootViewController:self.navigationMainController];
+//    [window setRootViewController:navigationMainController];
     
     // Responds to key preses
-    [self.window makeKeyAndVisible];
+    [window makeKeyAndVisible];
     
-    NSLog(@"Width: %f, Height %f", viewRect.size.width, viewRect.size.height); // Simply prints the width and height
+    // Simply prints the width and height
+    NSLog(@"Width: %f, Height %f", viewRect.size.width, viewRect.size.height);
     
     return YES;
 }
@@ -67,6 +92,7 @@
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
 }
+
 
 #pragma mark - Core Data stack
 
@@ -146,6 +172,13 @@
             abort();
         }
     }
+}
+
+#pragma mark - Custom Implemented Method
+
+- (void)onSplashScreenDone {
+    window.rootViewController = navigationMainController;
+    NSLog(@"Splash Screen Done Loading");
 }
 
 @end

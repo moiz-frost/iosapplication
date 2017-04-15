@@ -1,20 +1,14 @@
-//
-//  AppDelegate.h
-//  Application
-//
-//  Created by ABDUL MOIZ SHEIKH on 4/14/17.
-//  Copyright © 2017 2plebs. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "SplashScreenViewController.h"
 
-@class ViewController;
+@class LoginController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) ViewController *mainViewController;
+@property (strong, nonatomic) LoginController *mainViewController;
+@property (strong, nonatomic) SplashScreenViewController *splashScreenViewController;
 @property (strong, nonatomic) UINavigationController *navigationMainController;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -24,6 +18,8 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
+
+- (void)onSplashScreenDone;
 
 @end
 

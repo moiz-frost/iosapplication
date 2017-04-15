@@ -1,21 +1,13 @@
-//
-//  ViewController.m
-//  Application
-//
-//  Created by Abdul Moiz on 15/04/2017.
-//  Copyright © 2017 2plebs. All rights reserved.
-//
+#import "LoginController.h"
 
-#import "ViewController.h"
-
-@interface ViewController ()
+@interface LoginController ()
 
 @end
 
-@implementation ViewController
+@implementation LoginController
 
-@synthesize textField = _textField;
-@synthesize button = _button;
+@synthesize textField;
+@synthesize button;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,20 +19,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Actions
+
+- (IBAction)textFieldClicked:(id)sender {
+    NSLog(@"Inside Text field");
+}
+
 - (IBAction)buttonClicked:(id)sender {
     // Close the keyboard
-    [self.textField resignFirstResponder];
+    [textField resignFirstResponder];
     
     // Retrieve the input string from the text field
-    NSString *inputName = [[NSString alloc] initWithString:self.textField.text];
+    NSString *inputName = [[NSString alloc] initWithString:textField.text];
     
     // Executable block to clear text field after on success alert view
     void (^clearTextFieldBlock)(void) = ^{
-        self.textField.text = @"";
+        textField.text = @"";
     };
     
     // If textfield empty
     if ([inputName length] == 0) {
+        
         UIAlertController *errorAlerController = [UIAlertController
                                     alertControllerWithTitle:@"Error"
                                     message:@"Text field is empty"
@@ -51,8 +50,9 @@
                                     style:UIAlertActionStyleDestructive
                                     handler:nil]];
         [self presentViewController:errorAlerController animated:YES completion:nil];
-    }
-    
+        
+    } else {
+        
     // If textfield not empty
     UIAlertController *successAlertController = [UIAlertController
                                             alertControllerWithTitle:@"Success!"
@@ -64,6 +64,8 @@
                                       style:UIAlertActionStyleDefault
                                       handler:nil]];
     [self presentViewController:successAlertController animated:YES completion:clearTextFieldBlock];
+        
+    }
     
     
     
