@@ -1,4 +1,5 @@
 #import "LoginController.h"
+#import "NavigationSideMenuTableViewController.h"
 
 @interface LoginController ()
 
@@ -6,7 +7,8 @@
 
 @implementation LoginController
 
-@synthesize textField;
+@synthesize usernameField;
+@synthesize passwordField;
 @synthesize button;
 
 - (void)viewDidLoad {
@@ -21,55 +23,74 @@
 
 #pragma mark - Actions
 
-- (IBAction)textFieldClicked:(id)sender {
-    NSLog(@"Inside Text field");
-}
-
 - (IBAction)buttonClicked:(id)sender {
-    // Close the keyboard
-    [textField resignFirstResponder];
+    NSString *actualUsername = @"admin";
+    NSString *actualPassword = @"admin";
     
-    // Retrieve the input string from the text field
-    NSString *inputName = [[NSString alloc] initWithString:textField.text];
+    // Close the keyboard
+    [usernameField resignFirstResponder];
+    
+    // Retrieve the input strings from the text field
+    NSString *inputUsername = [[NSString alloc] initWithString:usernameField.text];
+    NSString *inputPassword = [[NSString alloc] initWithString:passwordField.text];
     
     // Executable block to clear text field after on success alert view
-    void (^clearTextFieldBlock)(void) = ^{
-        textField.text = @"";
+    void (^clearTextFieldBlock)(void) =
+    ^{
+        usernameField.text = @"";
+        passwordField.text = @"";
     };
     
-    // If textfield empty
-    if ([inputName length] == 0) {
+    if (([inputUsername isEqualToString:actualUsername]) && ([inputPassword isEqualToString:actualPassword]))
+        // Success scenario
+    {
         
-        UIAlertController *errorAlerController = [UIAlertController
-                                    alertControllerWithTitle:@"Error"
-                                    message:@"Text field is empty"
-                                    preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *successAlertController = [UIAlertController
+                                                     alertControllerWithTitle:@"Success"
+                                                     message:[NSString
+                                                              stringWithFormat: @"Welcome %@", actualUsername]
+                                                     preferredStyle:UIAlertControllerStyleAlert];
         
-        [errorAlerController addAction:[UIAlertAction
-                                    actionWithTitle:@"Back"
-                                    style:UIAlertActionStyleDestructive
-                                    handler:nil]];
-        [self presentViewController:errorAlerController animated:YES completion:nil];
         
-    } else {
+        [successAlertController addAction:[UIAlertAction
+                                           actionWithTitle:@"Success!"
+                                           style:UIAlertActionStyleDefault
+                                           handler:nil]];
         
-    // If textfield not empty
-    UIAlertController *successAlertController = [UIAlertController
-                                            alertControllerWithTitle:@"Success!"
-                                            message:[NSString stringWithFormat: @"Welcome %@", inputName]
-                                            preferredStyle:UIAlertControllerStyleAlert];
-    
-    [successAlertController addAction:[UIAlertAction
-                                      actionWithTitle:@"Correct!"
-                                      style:UIAlertActionStyleDefault
-                                      handler:nil]];
-    [self presentViewController:successAlertController animated:YES completion:clearTextFieldBlock];
+//        [self presentViewController:successAlertController animated:YES completion:clearTextFieldBlock];
+        
+        [self goToNextViewController];
         
     }
     
-    
+    if ((![inputUsername isEqualToString:actualUsername]) || (![inputPassword isEqualToString:actualPassword]))
+        // If invalid field empty
+    {
+        
+        UIAlertController *errorAlertController = [UIAlertController
+                                                   alertControllerWithTitle:@"Error"
+                                                   message:@"Invalid credentials"
+                                                   preferredStyle:UIAlertControllerStyleAlert];
+        
+        [errorAlertController addAction:[UIAlertAction
+                                         actionWithTitle:@"Back"
+                                         style:UIAlertActionStyleDestructive
+                                         handler:nil]];
+        
+        [self presentViewController:errorAlertController animated:YES completion:clearTextFieldBlock];
+        
+        
+    }
     
 }
+
+
+- (void)goToNextViewController {
+    NavigationSideMenuTableViewController *leftSideMenuBar = [[NavigationSideMenuTableViewController alloc] initWithNibName:@"NavigationSideMenuTableViewController" bundle:nil];
+    
+    [self.navigationController pushViewController:leftSideMenuBar animated:YES];
+}
+
 
 /*
 #pragma mark - Navigation

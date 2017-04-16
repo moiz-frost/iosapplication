@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Application/LoginController.m"
-            timestampString = "513975082.895087"
+            filePath = "Application/NavigationSideMenuTableViewController.m"
+            timestampString = "514065596.001885"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "-buttonClicked:"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "-numberOfSectionsInTableView:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

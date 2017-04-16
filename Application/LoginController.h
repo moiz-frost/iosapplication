@@ -2,9 +2,25 @@
 
 @interface LoginController : UIViewController
 
-@property (nonatomic, readwrite, weak) IBOutlet UITextField *textField;
+
+
+#pragma mark - Properties
+
+@property (nonatomic, readwrite, weak) IBOutlet UITextField *usernameField;
+@property (nonatomic, readwrite, weak) IBOutlet UITextField *passwordField;
 @property (nonatomic, readwrite, weak) IBOutlet UIButton *button;
 
+
+
+#pragma mark - Actions
+
 -(IBAction)buttonClicked:(id)sender;
--(IBAction)textFieldClicked:(id)sender;
+
+
+
+
+#pragma mark - Custom Implemented Methods
+
+- (void)goToNextViewController;
+
 @end

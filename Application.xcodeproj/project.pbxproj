@@ -12,6 +12,9 @@
 		031BDC391EA27DD20010E93B /* Default Splash Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 031BDC381EA27DD20010E93B /* Default Splash Screen.png */; };
 		031BDC421EA28E520010E93B /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 031BDC401EA28E520010E93B /* SplashScreenViewController.m */; };
 		031BDC431EA28E520010E93B /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031BDC411EA28E520010E93B /* SplashScreenViewController.xib */; };
+		0324F1BE1EA3EA13003E1FCB /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0324F1BD1EA3EA13003E1FCB /* SWRevealViewController.m */; };
+		0324F1C71EA3EC0E003E1FCB /* NavigationSideMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0324F1C51EA3EC0E003E1FCB /* NavigationSideMenuTableViewController.m */; };
+		0324F1C81EA3EC0E003E1FCB /* NavigationSideMenuTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0324F1C61EA3EC0E003E1FCB /* NavigationSideMenuTableViewController.xib */; };
 		C8CB62501EA0D307001927D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CB624F1EA0D307001927D0 /* main.m */; };
 		C8CB62531EA0D307001927D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CB62521EA0D307001927D0 /* AppDelegate.m */; };
 		C8CB625C1EA0D307001927D0 /* Application.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8CB625A1EA0D307001927D0 /* Application.xcdatamodeld */; };
@@ -27,6 +30,11 @@
 		031BDC3F1EA28E520010E93B /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
 		031BDC401EA28E520010E93B /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
 		031BDC411EA28E520010E93B /* SplashScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashScreenViewController.xib; sourceTree = "<group>"; };
+		0324F1BC1EA3E9C5003E1FCB /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		0324F1BD1EA3EA13003E1FCB /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		0324F1C41EA3EC0E003E1FCB /* NavigationSideMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationSideMenuTableViewController.h; sourceTree = "<group>"; };
+		0324F1C51EA3EC0E003E1FCB /* NavigationSideMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationSideMenuTableViewController.m; sourceTree = "<group>"; };
+		0324F1C61EA3EC0E003E1FCB /* NavigationSideMenuTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationSideMenuTableViewController.xib; sourceTree = "<group>"; };
 		C8CB624B1EA0D307001927D0 /* Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Application.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8CB624F1EA0D307001927D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C8CB62511EA0D307001927D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,6 +88,9 @@
 				031BDC3F1EA28E520010E93B /* SplashScreenViewController.h */,
 				031BDC401EA28E520010E93B /* SplashScreenViewController.m */,
 				031BDC411EA28E520010E93B /* SplashScreenViewController.xib */,
+				0324F1C41EA3EC0E003E1FCB /* NavigationSideMenuTableViewController.h */,
+				0324F1C51EA3EC0E003E1FCB /* NavigationSideMenuTableViewController.m */,
+				0324F1C61EA3EC0E003E1FCB /* NavigationSideMenuTableViewController.xib */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -89,6 +100,8 @@
 			children = (
 				031BDC381EA27DD20010E93B /* Default Splash Screen.png */,
 				C8CB624F1EA0D307001927D0 /* main.m */,
+				0324F1BC1EA3E9C5003E1FCB /* SWRevealViewController.h */,
+				0324F1BD1EA3EA13003E1FCB /* SWRevealViewController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -155,6 +168,7 @@
 				031BDC321EA21BFE0010E93B /* LoginController.xib in Resources */,
 				031BDC431EA28E520010E93B /* SplashScreenViewController.xib in Resources */,
 				C8CB625E1EA0D307001927D0 /* Assets.xcassets in Resources */,
+				0324F1C81EA3EC0E003E1FCB /* NavigationSideMenuTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,10 +180,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8CB625C1EA0D307001927D0 /* Application.xcdatamodeld in Sources */,
+				0324F1C71EA3EC0E003E1FCB /* NavigationSideMenuTableViewController.m in Sources */,
 				C8CB62531EA0D307001927D0 /* AppDelegate.m in Sources */,
 				031BDC421EA28E520010E93B /* SplashScreenViewController.m in Sources */,
 				031BDC311EA21BFE0010E93B /* LoginController.m in Sources */,
 				C8CB62501EA0D307001927D0 /* main.m in Sources */,
+				0324F1BE1EA3EA13003E1FCB /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

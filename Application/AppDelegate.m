@@ -64,7 +64,7 @@
     [window makeKeyAndVisible];
     
     // Simply prints the width and height
-    NSLog(@"Width: %f, Height %f", viewRect.size.width, viewRect.size.height);
+//    NSLog(@"Width: %f, Height %f", viewRect.size.width, viewRect.size.height);
     
     return YES;
 }
@@ -178,7 +178,7 @@
 
 - (void)onSplashScreenDone {
     window.rootViewController = navigationMainController;
-    NSLog(@"Splash Screen Done Loading");
+//    NSLog(@"Splash Screen Done Loading");
 }
 
 @end

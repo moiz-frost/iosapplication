@@ -10,4 +10,7 @@
 
 @interface NavigationSideMenuTableViewController : UITableViewController
 
+
+@property (nonatomic, strong) NSArray *menuItemList;
+
 @end

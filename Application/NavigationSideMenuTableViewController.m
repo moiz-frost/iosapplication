@@ -8,15 +8,22 @@
 
 #import "NavigationSideMenuTableViewController.h"
 
-@interface NavigationSideMenuTableViewController ()
+@interface NavigationSideMenuTableViewController () <UITableViewDataSource>
 
 @end
 
+
 @implementation NavigationSideMenuTableViewController
+
+
+@synthesize menuItemList;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    menuItemList = @[@"Home", @"Menu", @"About"];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    tableView.dataSource = self;
+    [self.view addSubview:tableView];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -31,14 +38,22 @@
 
 #pragma mark - Table view data source
 
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger row = indexPath.row;
+    NSString *data = menuItemList[row];
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    cell.textLabel.text = data;
+    return cell;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return [menuItemList count];
 }
 
 /*
