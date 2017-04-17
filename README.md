@@ -1,1 +1,1 @@
-# IOS application made in Objective-C
+# Test IOS app
