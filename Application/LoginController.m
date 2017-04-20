@@ -1,5 +1,4 @@
 #import "LoginController.h"
-#import "NavigationSideMenuTableViewController.h"
 
 @interface LoginController ()
 
@@ -57,9 +56,10 @@
                                            style:UIAlertActionStyleDefault
                                            handler:nil]];
         
+        [self goToMainMenu];
+        
 //        [self presentViewController:successAlertController animated:YES completion:clearTextFieldBlock];
         
-        [self goToNextViewController];
         
     }
     
@@ -84,11 +84,11 @@
     
 }
 
-
-- (void)goToNextViewController {
-    NavigationSideMenuTableViewController *leftSideMenuBar = [[NavigationSideMenuTableViewController alloc] initWithNibName:@"NavigationSideMenuTableViewController" bundle:nil];
+-(void)goToMainMenu
+{
+    MainMenuSubViewViewController *mainMenu = [[MainMenuSubViewViewController alloc] initWithNibName:@"MainMenuSubViewViewController" bundle:nil];
     
-    [self.navigationController pushViewController:leftSideMenuBar animated:YES];
+    [self.navigationController pushViewController:mainMenu animated:YES];
 }
 
 

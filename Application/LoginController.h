@@ -1,4 +1,5 @@
 #import <UIKit/UIKit.h>
+#import "MainMenuSubViewViewController.h"
 
 @interface LoginController : UIViewController
 
@@ -21,6 +22,6 @@
 
 #pragma mark - Custom Implemented Methods
 
-- (void)goToNextViewController;
+-(void)goToMainMenu;
 
 @end
