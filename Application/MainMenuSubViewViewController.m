@@ -1,35 +1,51 @@
 #import "MainMenuSubViewViewController.h"
+#import "LeftNavigationMenu.h"
 
-@interface MainMenuSubViewViewController ()
+@interface MainMenuSubViewViewController () <LeftNavigatioNMenuProtocol>
 
 @end
 
 @implementation MainMenuSubViewViewController
 
-@synthesize menuItem;
+@synthesize menuSubHeading;
+@synthesize revealController;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    menuItem = [[LeftNavigationMenu alloc] initWithStyle:UITableViewStylePlain];
+    LeftNavigationMenu *rearView = [[LeftNavigationMenu alloc] initWithStyle:UITableViewStylePlain];
+    
+    UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearView];
+    
+    rearView.delegate = self;
+    
+    revealController = [self revealViewController];
+    
+    revealController.rearViewController = rearNavigationController;
+    
+//    [revealController panGestureRecognizer];
+//    [revealController tapGestureRecognizer];
+    
     
     [self.navigationController.navigationBar
-     setBackgroundImage:[UIImage imageNamed:@"iphone_top_bar_bg@2x.png"]
-     forBarMetrics:UIBarMetricsDefault];
+    setBackgroundImage:[UIImage imageNamed:@"iphone_top_bar_bg@2x.png"]
+    forBarMetrics:UIBarMetricsDefault];
     
     
     UIButton *leftButtonCustomView = [self createButtonWithNormalImage:@"btn_left_nav_normal@2x.png"
                                                     pressedButtonImage:@"btn_left_nav_pressed@2x.png"
                                                         forNormalState:UIControlStateNormal
                                                        forPressedState:UIControlStateHighlighted
-                                                                action:@selector(showMenuItemViewController)
+                                                                target:revealController
+                                                                action:@selector(revealToggle:)
                                                       forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *rightButtonCustomView = [self createButtonWithNormalImage:@"btn_right_nav_normal@2x.png"
                                                      pressedButtonImage:@"btn_right_nav_pressed@2x.png"
                                                          forNormalState:UIControlStateNormal
                                                         forPressedState:UIControlStateHighlighted
-                                                                action:@selector(showMenuItemViewController)
+                                                                 target:revealController
+                                                                 action:@selector(rightRevealToggle:)
                                                        forControlEvents:UIControlEventTouchUpInside];
     
     
@@ -37,12 +53,17 @@
                                              initWithCustomView:leftButtonCustomView];
     
     UIBarButtonItem *rightNavigationButton = [[UIBarButtonItem alloc]
-                                             initWithCustomView:rightButtonCustomView];
+                                              initWithCustomView:rightButtonCustomView];
     
+//    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc]
+//                                              initWithImage:[UIImage imageNamed:@"reveal-icon.png"]
+//                                              style:UIBarButtonItemStylePlain
+//                                              target:revealController
+//                                              action:@selector(rightRevealToggle:)];
+//    
     
     self.navigationItem.leftBarButtonItem = leftNavigationButton;
     self.navigationItem.rightBarButtonItem = rightNavigationButton;
-    
     
     // Do any additional setup after loading the view from its nib.
 }
@@ -54,14 +75,11 @@
 
 # pragma mark - Custom Methods
 
-- (void)showMenuItemViewController{
-    [menuItem presentedViewController];
-}
-
 - (UIButton *)createButtonWithNormalImage:(NSString *)imageNormalName
                        pressedButtonImage:(NSString *)imagePressedName
                            forNormalState:(UIControlState)normalState
                           forPressedState:(UIControlState)pressedState
+                                   target:(nullable id)target
                                    action:(SEL)action
                          forControlEvents:(UIControlEvents)event{
     
@@ -71,19 +89,28 @@
     UIButton *buttonCustomView = [UIButton buttonWithType:UIButtonTypeCustom];
     
     buttonCustomView.bounds = CGRectMake(0, 0,
-                                              buttonNormalImage.size.width,
-                                              buttonNormalImage.size.height);
+                                         buttonNormalImage.size.width,
+                                         buttonNormalImage.size.height);
     
     [buttonCustomView setImage:buttonNormalImage forState:normalState];
     [buttonCustomView setImage:buttonPressedImage forState:pressedState];
     
     [buttonCustomView
-     addTarget:self
+     addTarget:target
      action:action
      forControlEvents:event];
     
     return buttonCustomView;
 }
+
+
+#pragma mark - LeftNavigationMenuProtocolMethods
+
+- (void)cellClicked:(NSString*)cellLabelValue {
+    self.menuSubHeading.text = cellLabelValue;
+    [revealController revealToggleAnimated:YES];
+}
+
 
 
 /*

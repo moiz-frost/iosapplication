@@ -1,5 +1,4 @@
 #import <UIKit/UIKit.h>
-#import "MainMenuSubViewViewController.h"
 
 @interface LoginController : UIViewController
 
@@ -16,8 +15,6 @@
 #pragma mark - Actions
 
 -(IBAction)buttonClicked:(id)sender;
-
-
 
 
 #pragma mark - Custom Implemented Methods

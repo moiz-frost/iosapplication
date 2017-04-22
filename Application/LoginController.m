@@ -1,6 +1,9 @@
 #import "LoginController.h"
+#import "MainMenuSubViewViewController.h"
+#import "LeftNavigationMenu.h"
 
-@interface LoginController ()
+
+@interface LoginController () <SWRevealViewControllerDelegate>
 
 @end
 
@@ -86,9 +89,22 @@
 
 -(void)goToMainMenu
 {
-    MainMenuSubViewViewController *mainMenu = [[MainMenuSubViewViewController alloc] initWithNibName:@"MainMenuSubViewViewController" bundle:nil];
+    MainMenuSubViewViewController *frontView = [[MainMenuSubViewViewController alloc]
+                 initWithNibName:@"MainMenuSubViewViewController"
+                 bundle:[NSBundle mainBundle]];
     
-    [self.navigationController pushViewController:mainMenu animated:YES];
+//    LeftNavigationMenu *rearView = [[LeftNavigationMenu alloc] initWithStyle:UITableViewStylePlain];
+//    
+//    UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearView];
+    
+    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontView];
+    
+//    self.revealViewController.rearViewController = rearNavigationController;
+//    self.revealViewController.rightViewController = rearNavigationController;
+    
+    [self.revealViewController initWithRearViewController:nil
+                                      frontViewController:frontNavigationController];
+    
 }
 
 

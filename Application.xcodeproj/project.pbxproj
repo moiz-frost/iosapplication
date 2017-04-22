@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0304F1E11EAA784F003ADE3F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0304F1E01EAA784F003ADE3F /* SWRevealViewController.m */; };
 		0305D1B51EA9E06D00D6DC45 /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0305D1B41EA9E06D00D6DC45 /* DataStore.m */; };
 		0305D1D41EA9FA7100D6DC45 /* btn_done_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0305D1C01EA9FA7100D6DC45 /* btn_done_normal@2x.png */; };
 		0305D1D51EA9FA7100D6DC45 /* btn_done_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0305D1C11EA9FA7100D6DC45 /* btn_done_pressed@2x.png */; };
@@ -41,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0304F1DF1EAA784F003ADE3F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		0304F1E01EAA784F003ADE3F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		0305D1B31EA9E06D00D6DC45 /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStore.h; sourceTree = "<group>"; };
 		0305D1B41EA9E06D00D6DC45 /* DataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStore.m; sourceTree = "<group>"; };
 		0305D1C01EA9FA7100D6DC45 /* btn_done_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn_done_normal@2x.png"; path = "Props/btn_done_normal@2x.png"; sourceTree = "<group>"; };
@@ -93,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0304F1DE1EAA784F003ADE3F /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0304F1DF1EAA784F003ADE3F /* SWRevealViewController.h */,
+				0304F1E01EAA784F003ADE3F /* SWRevealViewController.m */,
+			);
+			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
 		0305D1C91EA9FA7100D6DC45 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +164,7 @@
 		C8CB624D1EA0D307001927D0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				0304F1DE1EAA784F003ADE3F /* SWRevealViewController */,
 				C8CB62511EA0D307001927D0 /* AppDelegate.h */,
 				C8CB62521EA0D307001927D0 /* AppDelegate.m */,
 				C8CB625D1EA0D307001927D0 /* Assets.xcassets */,
@@ -298,6 +311,7 @@
 				C8CB62531EA0D307001927D0 /* AppDelegate.m in Sources */,
 				031BDC421EA28E520010E93B /* SplashScreenViewController.m in Sources */,
 				031BDC311EA21BFE0010E93B /* LoginController.m in Sources */,
+				0304F1E11EAA784F003ADE3F /* SWRevealViewController.m in Sources */,
 				031D02D11EA7F7B600045B93 /* MainMenuSubViewViewController.m in Sources */,
 				C8CB62501EA0D307001927D0 /* main.m in Sources */,
 				0305D1F01EAA18F100D6DC45 /* LeftNavigationMenu.m in Sources */,

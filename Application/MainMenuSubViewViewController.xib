@@ -16,6 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainMenuSubViewViewController">
             <connections>
+                <outlet property="menuSubHeading" destination="jaZ-Ns-IOP" id="piz-9h-8Nn"/>
                 <outlet property="searchDisplayController" destination="28t-28-ZeA" id="479-yT-ImX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -33,18 +34,18 @@
                     <rect key="frame" x="0.0" y="110" width="375" height="62"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jaZ-Ns-IOP">
-                    <rect key="frame" x="151" y="123" width="73" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Oxygen-Bold" family="Oxygen" pointSize="17"/>
-                    <color key="textColor" red="0.44788932800292969" green="0.22289302945137024" blue="0.14252069592475891" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <searchBar contentMode="redraw" searchBarStyle="minimal" id="N8m-e4-pKy">
                     <rect key="frame" x="0.0" y="66" width="375" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Salad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jaZ-Ns-IOP">
+                    <rect key="frame" x="115" y="110" width="144" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Oxygen-Bold" family="Oxygen" pointSize="17"/>
+                    <color key="textColor" red="0.44788932800292969" green="0.22289302945137024" blue="0.14252069592475891" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <point key="canvasLocation" x="26.5" y="52.5"/>

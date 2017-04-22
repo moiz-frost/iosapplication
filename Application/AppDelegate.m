@@ -1,17 +1,18 @@
 #import "AppDelegate.h"
 #import "LoginController.h"
-#import "LeftNavigationMenu.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <SWRevealViewControllerDelegate>
 
 @end	
 
 @implementation AppDelegate
 
 @synthesize window;
-@synthesize mainViewController;
-@synthesize navigationMainController;
+@synthesize loginViewController;
 @synthesize splashScreenViewController;
+@synthesize frontNavigationViewController;
+@synthesize rearNavigationViewController;
+@synthesize mainRevealViewController;
 
 
 
@@ -29,22 +30,31 @@
     // Main window object initialized with viewRect, window is a property inside UIWindow class
     window = [[UIWindow alloc] initWithFrame:viewRect];
     
-    // Create a new view controller for our main window
-    mainViewController = [[LoginController alloc]
+    // Create a login view controller
+    loginViewController = [[LoginController alloc]
                                initWithNibName:@"LoginController"
                                	bundle:nil];
-    
     
     // Create a new view controller for splash screen window
     splashScreenViewController = [[SplashScreenViewController alloc]
                                        initWithNibName:@"SplashScreenViewController"
                                        bundle:nil];
     
-    LeftNavigationMenu *leftnav = [[LeftNavigationMenu alloc] initWithStyle:UITableViewStylePlain];
+    // Front navigation controller
+    frontNavigationViewController = [[UINavigationController alloc]
+                                         initWithRootViewController:loginViewController];
     
-    // Main navigation controller for traversing
-    navigationMainController = [[UINavigationController alloc]
-                                         initWithRootViewController:leftnav];
+    // Rear navigation controller
+    rearNavigationViewController = [[UINavigationController alloc] init];
+    
+    
+    // Main SWRevealViewController
+    mainRevealViewController = [[SWRevealViewController alloc]
+                                initWithRearViewController:rearNavigationViewController
+                                frontViewController:frontNavigationViewController];
+    
+    mainRevealViewController.delegate = self;
+    
     
     // Assign our window a root view controller
     window.rootViewController = self.splashScreenViewController;
@@ -179,7 +189,7 @@
 #pragma mark - Custom Implemented Method
 
 - (void)onSplashScreenDone {
-    window.rootViewController = navigationMainController;
+    window.rootViewController = mainRevealViewController;
 //    NSLog(@"Splash Screen Done Loading");
 }
 
