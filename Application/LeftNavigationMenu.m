@@ -1,5 +1,6 @@
 #import "LeftNavigationMenu.h"
 #import "MainMenuSubViewViewController.h"
+#import "CustomLeftNavigationTableViewCell.h"
 
 @interface LeftNavigationMenu ()
 
@@ -13,13 +14,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.clearsSelectionOnViewWillAppear = NO;
-    self.tableView.backgroundView = [[UIImageView alloc]
-                                     initWithImage:[UIImage imageNamed:@"iphone_body_bg@2x.png"]];
+//    self.clearsSelectionOnViewWillAppear = NO;
+//    self.tableView.backgroundView = [[UIImageView alloc]
+//                                     initWithImage:[UIImage imageNamed:@"iphone_body_bg@2x.png"]];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"MenuItem"];
+    [self.tableView registerClass:[CustomLeftNavigationTableViewCell class] forCellReuseIdentifier:@"MenuItem"];
     
-    menuList = @[@"Drinks", @"Desserts", @"Starter", @"Chinese", @"French", @"Fast Food"];
+//    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CustomLeftNavigationTableViewCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([CustomLeftNavigationTableViewCell class])];
+    
+    menuList = @[@"Drinks", @"Desserts", @"Starter", @"Chinese", @"French", @"Fast Food", @"Salad"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -46,16 +49,21 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView
-                             dequeueReusableCellWithIdentifier:@"MenuItem"
-                             forIndexPath:indexPath];
+    CustomLeftNavigationTableViewCell *cell = (CustomLeftNavigationTableViewCell*)[tableView
+                             dequeueReusableCellWithIdentifier:[CustomLeftNavigationTableViewCell cellIdentifier] forIndexPath:indexPath];
     if(cell == nil){
-        cell = [[UITableViewCell alloc]
-                initWithStyle:UITableViewCellStyleDefault
-                reuseIdentifier:@"MenuItem"];
+        cell = [CustomLeftNavigationTableViewCell createCell];
+        
+//        cell = [[UITableViewCell alloc]
+//                initWithStyle:UITableViewCellStyleDefault
+//                reuseIdentifier:@"MenuItem"];
+        
     }
     
-    cell.textLabel.text = menuList[indexPath.row];
+    NSLog(@"%@",[menuList objectAtIndex:indexPath.row]);
+
+    cell.categoryName.text = [menuList objectAtIndex:indexPath.row];
+//    cell.categoryImage.image = [UIImage imageNamed:@"btn_done_normal@2x.png"];
     
     return cell;
 }

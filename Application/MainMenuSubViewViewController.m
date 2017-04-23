@@ -23,8 +23,8 @@
     
     revealController.rearViewController = rearNavigationController;
     
-//    [revealController panGestureRecognizer];
-//    [revealController tapGestureRecognizer];
+    [revealController panGestureRecognizer];
+    [revealController tapGestureRecognizer];
     
     
     [self.navigationController.navigationBar
