@@ -14,13 +14,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.clearsSelectionOnViewWillAppear = NO;
-//    self.tableView.backgroundView = [[UIImageView alloc]
-//                                     initWithImage:[UIImage imageNamed:@"iphone_body_bg@2x.png"]];
+    self.clearsSelectionOnViewWillAppear = NO;
+    self.tableView.backgroundView = [[UIImageView alloc]
+                                     initWithImage:[UIImage imageNamed:@"iphone_body_bg@2x.png"]];
     
-    [self.tableView registerClass:[CustomLeftNavigationTableViewCell class] forCellReuseIdentifier:@"MenuItem"];
+//    [self.tableView registerClass:[CustomLeftNavigationTableViewCell class]
+//           forCellReuseIdentifier:[CustomLeftNavigationTableViewCell cellIdentifier]];
     
-//    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CustomLeftNavigationTableViewCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([CustomLeftNavigationTableViewCell class])];
+    [self.tableView
+     registerNib:[UINib nibWithNibName:@"CustomLeftNavigationTableViewCell"
+                                bundle:[NSBundle mainBundle]]
+     forCellReuseIdentifier:[CustomLeftNavigationTableViewCell cellIdentifier]];
     
     menuList = @[@"Drinks", @"Desserts", @"Starter", @"Chinese", @"French", @"Fast Food", @"Salad"];
     
@@ -49,25 +53,33 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CustomLeftNavigationTableViewCell *cell = (CustomLeftNavigationTableViewCell*)[tableView
-                             dequeueReusableCellWithIdentifier:[CustomLeftNavigationTableViewCell cellIdentifier] forIndexPath:indexPath];
+    CustomLeftNavigationTableViewCell *cell = (CustomLeftNavigationTableViewCell*)
+    [tableView dequeueReusableCellWithIdentifier:[CustomLeftNavigationTableViewCell cellIdentifier] forIndexPath:indexPath];
+     
     if(cell == nil){
-        cell = [CustomLeftNavigationTableViewCell createCell];
+        
+        NSArray *nib = [[NSBundle mainBundle]
+                        loadNibNamed:@"CustomLeftNavigationTableViewCell"
+                        owner:self
+                        options:nil];
+        cell = [nib lastObject];
         
 //        cell = [[UITableViewCell alloc]
 //                initWithStyle:UITableViewCellStyleDefault
 //                reuseIdentifier:@"MenuItem"];
         
     }
-    
-    NSLog(@"%@",[menuList objectAtIndex:indexPath.row]);
 
     cell.categoryName.text = [menuList objectAtIndex:indexPath.row];
-//    cell.categoryImage.image = [UIImage imageNamed:@"btn_done_normal@2x.png"];
+    cell.categoryImage.image = [UIImage imageNamed:@"btn_done_normal@2x.png"];
     
     return cell;
 }
 
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80;
+}
 /*
  // Override to support conditional editing of the table view.
  - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

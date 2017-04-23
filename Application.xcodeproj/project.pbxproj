@@ -35,7 +35,7 @@
 		031D02D11EA7F7B600045B93 /* MainMenuSubViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 031D02CF1EA7F7B600045B93 /* MainMenuSubViewViewController.m */; };
 		031D02D21EA7F7B600045B93 /* MainMenuSubViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031D02D01EA7F7B600045B93 /* MainMenuSubViewViewController.xib */; };
 		0349917A1EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 034991781EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.m */; };
-		0349917B1EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034991791EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.xib */; };
+		034991811EAD066A007DCAC7 /* CustomLeftNavigationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034991801EAD066A007DCAC7 /* CustomLeftNavigationTableViewCell.xib */; };
 		C8CB62501EA0D307001927D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CB624F1EA0D307001927D0 /* main.m */; };
 		C8CB62531EA0D307001927D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CB62521EA0D307001927D0 /* AppDelegate.m */; };
 		C8CB625C1EA0D307001927D0 /* Application.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8CB625A1EA0D307001927D0 /* Application.xcdatamodeld */; };
@@ -79,7 +79,7 @@
 		031D02D01EA7F7B600045B93 /* MainMenuSubViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuSubViewViewController.xib; sourceTree = "<group>"; };
 		034991771EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLeftNavigationTableViewCell.h; sourceTree = "<group>"; };
 		034991781EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLeftNavigationTableViewCell.m; sourceTree = "<group>"; };
-		034991791EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomLeftNavigationTableViewCell.xib; sourceTree = "<group>"; };
+		034991801EAD066A007DCAC7 /* CustomLeftNavigationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomLeftNavigationTableViewCell.xib; sourceTree = "<group>"; };
 		C8CB624B1EA0D307001927D0 /* Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Application.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8CB624F1EA0D307001927D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C8CB62511EA0D307001927D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -154,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				C8CB624D1EA0D307001927D0 /* Application */,
-				C8CB624C1EA0D307001927D0 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +163,7 @@
 				C8CB624B1EA0D307001927D0 /* Application.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		C8CB624D1EA0D307001927D0 /* Application */ = {
@@ -192,7 +192,8 @@
 				0305D1EF1EAA18F100D6DC45 /* LeftNavigationMenu.m */,
 				034991771EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.h */,
 				034991781EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.m */,
-				034991791EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.xib */,
+				034991801EAD066A007DCAC7 /* CustomLeftNavigationTableViewCell.xib */,
+				C8CB624C1EA0D307001927D0 /* Products */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -296,7 +297,7 @@
 				C8CB62611EA0D307001927D0 /* LaunchScreen.storyboard in Resources */,
 				031BDC321EA21BFE0010E93B /* LoginController.xib in Resources */,
 				0305D1DB1EA9FA7100D6DC45 /* category_bg33.png in Resources */,
-				0349917B1EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.xib in Resources */,
+				034991811EAD066A007DCAC7 /* CustomLeftNavigationTableViewCell.xib in Resources */,
 				031BDC431EA28E520010E93B /* SplashScreenViewController.xib in Resources */,
 				0305D1DE1EA9FA7100D6DC45 /* iphone_sub-heading-bar_smaller@2x.png in Resources */,
 				0305D1E41EAA0AEF00D6DC45 /* Side-Nav.jpg in Resources */,
