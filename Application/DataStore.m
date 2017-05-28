@@ -1,12 +1,5 @@
-//
-//  DataStore.m
-//  Application
-//
-//  Created by Abdul Moiz on 21/04/2017.
-//  Copyright © 2017 2plebs. All rights reserved.
-//
-
 #import "DataStore.h"
+#import "FileSystemHelper.h"
 
 
 @implementation DataStore
@@ -47,7 +40,7 @@
                                              initWithManagedObjectModel:model];
         
         // create a URL-based path to the passed in filename located in the Documents directory
-        NSURL *dataStoreURL = [self pathForDocumentsFile:@"rarebuys.sqlite"];
+        NSURL *dataStoreURL = [FileSystemHelper pathForDocumentsFile:@"datastore.sqlite"];
         
         // start with a clean slate each time the app starts
         [[NSFileManager defaultManager] removeItemAtURL:dataStoreURL

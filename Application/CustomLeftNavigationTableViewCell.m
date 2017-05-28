@@ -1,5 +1,3 @@
-
-
 #import "CustomLeftNavigationTableViewCell.h"
 
 @implementation CustomLeftNavigationTableViewCell

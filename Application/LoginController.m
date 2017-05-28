@@ -1,6 +1,7 @@
 #import "LoginController.h"
 #import "MainMenuSubViewViewController.h"
 #import "LeftNavigationMenu.h"
+#import "RegisterViewController.h"
 
 
 @interface LoginController () <SWRevealViewControllerDelegate>
@@ -9,12 +10,17 @@
 
 @implementation LoginController
 
+
+@synthesize revealController;
+
 @synthesize usernameField;
 @synthesize passwordField;
 @synthesize button;
+@synthesize registerButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    revealController = [self revealViewController];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -25,51 +31,77 @@
 
 #pragma mark - Actions
 
-- (IBAction)buttonClicked:(id)sender {
-    NSString *actualUsername = @"admin";
-    NSString *actualPassword = @"admin";
+- (IBAction)buttonClicked:(UIButton*)sender {
+    if ([sender.titleLabel.text isEqualToString:@"Login"]) {
+        [self login];
+    }
+    if ([sender.titleLabel.text isEqualToString:@"Register"]) {
+        [self registerAccount];
+    }
+}
+
+
+#pragma mark - Custom Methods
+
+-(void)login{
     
     // Close the keyboard
     [usernameField resignFirstResponder];
     
-    // Retrieve the input strings from the text field
-    NSString *inputUsername = [[NSString alloc] initWithString:usernameField.text];
-    NSString *inputPassword = [[NSString alloc] initWithString:passwordField.text];
-    
-    // Executable block to clear text field after on success alert view
+    // Executable block to clear text fields
     void (^clearTextFieldBlock)(void) =
     ^{
         usernameField.text = @"";
         passwordField.text = @"";
     };
     
-    if (([inputUsername isEqualToString:actualUsername]) && ([inputPassword isEqualToString:actualPassword]))
+    // Retrieve the input strings from the text field
+    NSString *inputUsername = [[NSString alloc] initWithString:usernameField.text];
+    NSString *inputPassword = [[NSString alloc] initWithString:passwordField.text];
+    
+    //Admin login credentials
+    NSString *adminUsername = @"admin";
+    NSString *adminPassword = @"admin";
+    
+    NSArray *allCustomers = [self fetchCustomerData];
+    
+    BOOL matchfound = NO;
+    
+    for (NSManagedObject *customer in allCustomers){
+        
+        NSString *customerUsername = [[NSString alloc] initWithString:[customer valueForKey:@"customerUsername"]];
+        NSString *customerPassword = [[NSString alloc] initWithString:[customer valueForKey:@"customerPassword"]];
+        
         // Success scenario
-    {
-        
-        UIAlertController *successAlertController = [UIAlertController
-                                                     alertControllerWithTitle:@"Success"
-                                                     message:[NSString
-                                                              stringWithFormat: @"Welcome %@", actualUsername]
-                                                     preferredStyle:UIAlertControllerStyleAlert];
-        
-        
-        [successAlertController addAction:[UIAlertAction
-                                           actionWithTitle:@"Success!"
-                                           style:UIAlertActionStyleDefault
-                                           handler:nil]];
-        
-        [self goToMainMenu];
-        
-//        [self presentViewController:successAlertController animated:YES completion:clearTextFieldBlock];
-        
-        
+        if (([inputUsername isEqualToString:customerUsername]) && ([inputPassword isEqualToString:customerPassword])) {
+            
+            matchfound = YES;
+            
+            UIAlertController *successAlertController = [UIAlertController
+                                                         alertControllerWithTitle:@"Success"
+                                                         message:[NSString
+                                                                  stringWithFormat: @"Welcome %@", [customer valueForKey:@"customerFullName"]]
+                                                         preferredStyle:UIAlertControllerStyleAlert];
+            
+            [successAlertController addAction:[UIAlertAction
+                                               actionWithTitle:@"Success!"
+                                               style:UIAlertActionStyleDefault
+                                               handler:nil]];
+            
+            [self presentViewController:successAlertController animated:YES completion:clearTextFieldBlock];
+            
+            // Waits 1.5seconds for the splash screen
+            [NSTimer
+             scheduledTimerWithTimeInterval:1.0f
+             target:self
+             selector:@selector(goToMainMenu)
+             userInfo:nil
+             repeats:NO];
+            
+        }
     }
     
-    if ((![inputUsername isEqualToString:actualUsername]) || (![inputPassword isEqualToString:actualPassword]))
-        // If invalid field empty
-    {
-        
+    if (matchfound == NO) {
         UIAlertController *errorAlertController = [UIAlertController
                                                    alertControllerWithTitle:@"Error"
                                                    message:@"Invalid credentials"
@@ -80,29 +112,63 @@
                                          style:UIAlertActionStyleDestructive
                                          handler:nil]];
         
-        [self presentViewController:errorAlertController animated:YES completion:clearTextFieldBlock];
-        
-        
+        [self presentViewController:errorAlertController
+                           animated:YES
+                         completion:clearTextFieldBlock];
+
     }
-    
+
 }
 
--(void)goToMainMenu
-{
+
+
+- (NSArray*)fetchCustomerData {
+    DataStore *dataStore = [DataStore sharedDataStorage];
+    NSManagedObjectContext *context = [dataStore context];
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Customer"];
+    
+    NSError *error;
+    
+    NSArray *allCustomers = [context executeFetchRequest:request error:&error];
+    
+    if (!allCustomers) {
+        NSLog(@"Error: %@", [error localizedDescription]);
+        return nil;
+    }
+    
+//    for (NSManagedObject *customer in allCustomers){
+//        NSLog(@"%@ %@ %@ %@",
+//              [customer valueForKey:@"customerUsername"],
+//              [customer valueForKey:@"customerPassword"],
+//              [customer valueForKey:@"customerFullName"],
+//              [customer valueForKey:@"customerEmail"]);
+//    }
+    
+    return allCustomers;
+}
+
+
+-(void)registerAccount {
+    NSLog(@"Pushing");
+    
+    RegisterViewController *frontView = [[RegisterViewController alloc]
+                                         initWithNibName:@"RegisterViewController"
+                                         bundle:nil];
+    
+    [revealController pushFrontViewController:frontView animated:YES];
+
+}
+
+-(void)goToMainMenu {
     MainMenuSubViewViewController *frontView = [[MainMenuSubViewViewController alloc]
-                 initWithNibName:@"MainMenuSubViewViewController"
-                 bundle:[NSBundle mainBundle]];
+                                                initWithNibName:@"MainMenuSubViewViewController"
+                                                bundle:[NSBundle mainBundle]];
     
-//    LeftNavigationMenu *rearView = [[LeftNavigationMenu alloc] initWithStyle:UITableViewStylePlain];
-//    
-//    UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearView];
+    UINavigationController *frontNavigationController = [[UINavigationController alloc]
+                                                         initWithRootViewController:frontView];
     
-    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontView];
-    
-//    self.revealViewController.rearViewController = rearNavigationController;
-//    self.revealViewController.rightViewController = rearNavigationController;
-    
-    [self.revealViewController initWithRearViewController:nil
+    [revealController initWithRearViewController:nil
                                       frontViewController:frontNavigationController];
     
 }

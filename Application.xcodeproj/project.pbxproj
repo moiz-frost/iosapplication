@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0301A3A81EDA4920008F548B /* FileSystemHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0301A3A71EDA4920008F548B /* FileSystemHelper.m */; };
 		0304F1E11EAA784F003ADE3F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0304F1E01EAA784F003ADE3F /* SWRevealViewController.m */; };
 		0305D1B51EA9E06D00D6DC45 /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0305D1B41EA9E06D00D6DC45 /* DataStore.m */; };
 		0305D1D41EA9FA7100D6DC45 /* btn_done_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0305D1C01EA9FA7100D6DC45 /* btn_done_normal@2x.png */; };
@@ -36,6 +37,8 @@
 		031D02D21EA7F7B600045B93 /* MainMenuSubViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031D02D01EA7F7B600045B93 /* MainMenuSubViewViewController.xib */; };
 		0349917A1EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 034991781EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.m */; };
 		034991811EAD066A007DCAC7 /* CustomLeftNavigationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034991801EAD066A007DCAC7 /* CustomLeftNavigationTableViewCell.xib */; };
+		03E015F21ED98ADD00193579 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E015F01ED98ADD00193579 /* RegisterViewController.m */; };
+		03E015F31ED98ADD00193579 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E015F11ED98ADD00193579 /* RegisterViewController.xib */; };
 		C8CB62501EA0D307001927D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CB624F1EA0D307001927D0 /* main.m */; };
 		C8CB62531EA0D307001927D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CB62521EA0D307001927D0 /* AppDelegate.m */; };
 		C8CB625C1EA0D307001927D0 /* Application.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8CB625A1EA0D307001927D0 /* Application.xcdatamodeld */; };
@@ -44,6 +47,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0301A3A61EDA4920008F548B /* FileSystemHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileSystemHelper.h; sourceTree = "<group>"; };
+		0301A3A71EDA4920008F548B /* FileSystemHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSystemHelper.m; sourceTree = "<group>"; };
 		0304F1DF1EAA784F003ADE3F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		0304F1E01EAA784F003ADE3F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		0305D1B31EA9E06D00D6DC45 /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStore.h; sourceTree = "<group>"; };
@@ -80,6 +85,9 @@
 		034991771EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLeftNavigationTableViewCell.h; sourceTree = "<group>"; };
 		034991781EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLeftNavigationTableViewCell.m; sourceTree = "<group>"; };
 		034991801EAD066A007DCAC7 /* CustomLeftNavigationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomLeftNavigationTableViewCell.xib; sourceTree = "<group>"; };
+		03E015EF1ED98ADD00193579 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		03E015F01ED98ADD00193579 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		03E015F11ED98ADD00193579 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		C8CB624B1EA0D307001927D0 /* Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Application.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8CB624F1EA0D307001927D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C8CB62511EA0D307001927D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -101,6 +109,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0301A3A91EDA494D008F548B /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				0301A3A61EDA4920008F548B /* FileSystemHelper.h */,
+				0301A3A71EDA4920008F548B /* FileSystemHelper.m */,
+				0305D1B31EA9E06D00D6DC45 /* DataStore.h */,
+				0305D1B41EA9E06D00D6DC45 /* DataStore.m */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
 		0304F1DE1EAA784F003ADE3F /* SWRevealViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +169,58 @@
 			path = "Segoe UI";
 			sourceTree = "<group>";
 		};
+		03E015EB1ED9852C00193579 /* Login Page */ = {
+			isa = PBXGroup;
+			children = (
+				031BDC2E1EA21BFE0010E93B /* LoginController.h */,
+				031BDC2F1EA21BFE0010E93B /* LoginController.m */,
+				031BDC301EA21BFE0010E93B /* LoginController.xib */,
+			);
+			name = "Login Page";
+			sourceTree = "<group>";
+		};
+		03E015EC1ED9854000193579 /* Splash Screen */ = {
+			isa = PBXGroup;
+			children = (
+				031BDC3F1EA28E520010E93B /* SplashScreenViewController.h */,
+				031BDC401EA28E520010E93B /* SplashScreenViewController.m */,
+				031BDC411EA28E520010E93B /* SplashScreenViewController.xib */,
+			);
+			name = "Splash Screen";
+			sourceTree = "<group>";
+		};
+		03E015ED1ED9854F00193579 /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				031D02CE1EA7F7B600045B93 /* MainMenuSubViewViewController.h */,
+				031D02CF1EA7F7B600045B93 /* MainMenuSubViewViewController.m */,
+				031D02D01EA7F7B600045B93 /* MainMenuSubViewViewController.xib */,
+			);
+			name = "Main Menu";
+			sourceTree = "<group>";
+		};
+		03E015EE1ED9855F00193579 /* Left Side Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0305D1EE1EAA18F100D6DC45 /* LeftNavigationMenu.h */,
+				0305D1EF1EAA18F100D6DC45 /* LeftNavigationMenu.m */,
+				034991771EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.h */,
+				034991781EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.m */,
+				034991801EAD066A007DCAC7 /* CustomLeftNavigationTableViewCell.xib */,
+			);
+			name = "Left Side Navigation";
+			sourceTree = "<group>";
+		};
+		03E015F41ED98AE100193579 /* Register Page */ = {
+			isa = PBXGroup;
+			children = (
+				03E015EF1ED98ADD00193579 /* RegisterViewController.h */,
+				03E015F01ED98ADD00193579 /* RegisterViewController.m */,
+				03E015F11ED98ADD00193579 /* RegisterViewController.xib */,
+			);
+			name = "Register Page";
+			sourceTree = "<group>";
+		};
 		C8CB62421EA0D307001927D0 = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +240,6 @@
 		C8CB624D1EA0D307001927D0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				0304F1DE1EAA784F003ADE3F /* SWRevealViewController */,
 				C8CB62511EA0D307001927D0 /* AppDelegate.h */,
 				C8CB62521EA0D307001927D0 /* AppDelegate.m */,
 				C8CB625D1EA0D307001927D0 /* Assets.xcassets */,
@@ -177,23 +247,13 @@
 				C8CB62621EA0D307001927D0 /* Info.plist */,
 				C8CB625A1EA0D307001927D0 /* Application.xcdatamodeld */,
 				C8CB624E1EA0D307001927D0 /* Supporting Files */,
-				031BDC2E1EA21BFE0010E93B /* LoginController.h */,
-				031BDC2F1EA21BFE0010E93B /* LoginController.m */,
-				031BDC301EA21BFE0010E93B /* LoginController.xib */,
-				031BDC3F1EA28E520010E93B /* SplashScreenViewController.h */,
-				031BDC401EA28E520010E93B /* SplashScreenViewController.m */,
-				031BDC411EA28E520010E93B /* SplashScreenViewController.xib */,
-				031D02CE1EA7F7B600045B93 /* MainMenuSubViewViewController.h */,
-				031D02CF1EA7F7B600045B93 /* MainMenuSubViewViewController.m */,
-				031D02D01EA7F7B600045B93 /* MainMenuSubViewViewController.xib */,
-				0305D1B31EA9E06D00D6DC45 /* DataStore.h */,
-				0305D1B41EA9E06D00D6DC45 /* DataStore.m */,
-				0305D1EE1EAA18F100D6DC45 /* LeftNavigationMenu.h */,
-				0305D1EF1EAA18F100D6DC45 /* LeftNavigationMenu.m */,
-				034991771EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.h */,
-				034991781EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.m */,
-				034991801EAD066A007DCAC7 /* CustomLeftNavigationTableViewCell.xib */,
+				0301A3A91EDA494D008F548B /* Core Data */,
+				03E015EB1ED9852C00193579 /* Login Page */,
+				03E015EC1ED9854000193579 /* Splash Screen */,
+				03E015ED1ED9854F00193579 /* Main Menu */,
+				03E015EE1ED9855F00193579 /* Left Side Navigation */,
 				C8CB624C1EA0D307001927D0 /* Products */,
+				03E015F41ED98AE100193579 /* Register Page */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -201,6 +261,7 @@
 		C8CB624E1EA0D307001927D0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0304F1DE1EAA784F003ADE3F /* SWRevealViewController */,
 				0305D1C91EA9FA7100D6DC45 /* Fonts */,
 				0305D1E51EAA0BD800D6DC45 /* iphone_body_bg@2x.png */,
 				0305D1EC1EAA10AD00D6DC45 /* Menu_Category.jpg */,
@@ -283,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0305D1D41EA9FA7100D6DC45 /* btn_done_normal@2x.png in Resources */,
+				03E015F31ED98ADD00193579 /* RegisterViewController.xib in Resources */,
 				0305D1D81EA9FA7100D6DC45 /* btn_right_nav_normal@2x.png in Resources */,
 				0305D1ED1EAA10AD00D6DC45 /* Menu_Category.jpg in Resources */,
 				0305D1E01EA9FA7100D6DC45 /* Menu.jpg in Resources */,
@@ -316,7 +378,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E015F21ED98ADD00193579 /* RegisterViewController.m in Sources */,
 				0305D1B51EA9E06D00D6DC45 /* DataStore.m in Sources */,
+				0301A3A81EDA4920008F548B /* FileSystemHelper.m in Sources */,
 				C8CB625C1EA0D307001927D0 /* Application.xcdatamodeld in Sources */,
 				C8CB62531EA0D307001927D0 /* AppDelegate.m in Sources */,
 				031BDC421EA28E520010E93B /* SplashScreenViewController.m in Sources */,

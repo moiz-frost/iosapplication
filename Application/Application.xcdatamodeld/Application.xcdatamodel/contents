@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Customer" representedClassName="Customer" syncable="YES" codeGenerationType="class">
+        <attribute name="customerContact" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="customerEmail" attributeType="String" syncable="YES"/>
+        <attribute name="customerFullName" attributeType="String" syncable="YES"/>
+        <attribute name="customerPassword" attributeType="String" syncable="YES"/>
+        <attribute name="customerUsername" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Customer" positionX="-963" positionY="-2097" width="128" height="118"/>
+    </elements>
 </model>
