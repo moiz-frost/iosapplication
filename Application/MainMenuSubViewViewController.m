@@ -7,6 +7,13 @@
 
 @implementation MainMenuSubViewViewController
 
+@synthesize image1;
+@synthesize image2;
+@synthesize image3;
+@synthesize image4;
+@synthesize image5;
+@synthesize image6;
+
 @synthesize menuSubHeading;
 @synthesize revealController;
 
@@ -72,6 +79,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 # pragma mark - Custom Methods
 

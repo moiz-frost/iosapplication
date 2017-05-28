@@ -37,6 +37,48 @@
 		031D02D21EA7F7B600045B93 /* MainMenuSubViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031D02D01EA7F7B600045B93 /* MainMenuSubViewViewController.xib */; };
 		0349917A1EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 034991781EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.m */; };
 		034991811EAD066A007DCAC7 /* CustomLeftNavigationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034991801EAD066A007DCAC7 /* CustomLeftNavigationTableViewCell.xib */; };
+		036ABEDF1EDB203F00F16869 /* cheesy breadsticks.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEAF1EDB203F00F16869 /* cheesy breadsticks.png */; };
+		036ABEE01EDB203F00F16869 /* chicken nuggets.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEB01EDB203F00F16869 /* chicken nuggets.png */; };
+		036ABEE11EDB203F00F16869 /* Fortune_cookie.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEB11EDB203F00F16869 /* Fortune_cookie.png */; };
+		036ABEE21EDB203F00F16869 /* fried onion rings.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEB21EDB203F00F16869 /* fried onion rings.png */; };
+		036ABEE31EDB203F00F16869 /* fried shrimps.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEB31EDB203F00F16869 /* fried shrimps.png */; };
+		036ABEE41EDB203F00F16869 /* fries and sausages.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEB41EDB203F00F16869 /* fries and sausages.png */; };
+		036ABEE51EDB203F00F16869 /* chicken chowmein.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEB61EDB203F00F16869 /* chicken chowmein.png */; };
+		036ABEE61EDB203F00F16869 /* dumplings.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEB71EDB203F00F16869 /* dumplings.png */; };
+		036ABEE71EDB203F00F16869 /* Hakka noodles.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEB81EDB203F00F16869 /* Hakka noodles.png */; };
+		036ABEE81EDB203F00F16869 /* Kungpaochicken.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEB91EDB203F00F16869 /* Kungpaochicken.png */; };
+		036ABEE91EDB203F00F16869 /* prawn soup.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEBA1EDB203F00F16869 /* prawn soup.png */; };
+		036ABEEA1EDB203F00F16869 /* sushi rols.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEBB1EDB203F00F16869 /* sushi rols.png */; };
+		036ABEEB1EDB203F00F16869 /* bakhlawa.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEBD1EDB203F00F16869 /* bakhlawa.png */; };
+		036ABEEC1EDB203F00F16869 /* lemon tart.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEBE1EDB203F00F16869 /* lemon tart.png */; };
+		036ABEED1EDB203F00F16869 /* mini_lava_cake.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEBF1EDB203F00F16869 /* mini_lava_cake.png */; };
+		036ABEEE1EDB203F00F16869 /* strawberry cheesecke.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEC01EDB203F00F16869 /* strawberry cheesecke.png */; };
+		036ABEEF1EDB203F00F16869 /* sundae-529x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEC11EDB203F00F16869 /* sundae-529x1024.png */; };
+		036ABEF01EDB203F00F16869 /* waffle with ice cream.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEC21EDB203F00F16869 /* waffle with ice cream.png */; };
+		036ABEF11EDB203F00F16869 /* Black Mamba.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEC41EDB203F00F16869 /* Black Mamba.png */; };
+		036ABEF21EDB203F00F16869 /* Cocacola.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEC51EDB203F00F16869 /* Cocacola.png */; };
+		036ABEF31EDB203F00F16869 /* Drink-PNG-180x180.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEC61EDB203F00F16869 /* Drink-PNG-180x180.png */; };
+		036ABEF41EDB203F00F16869 /* Drink-PNG-8-180x180.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEC71EDB203F00F16869 /* Drink-PNG-8-180x180.png */; };
+		036ABEF51EDB203F00F16869 /* Lemonade 180x180.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEC81EDB203F00F16869 /* Lemonade 180x180.png */; };
+		036ABEF61EDB203F00F16869 /* Margarita.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEC91EDB203F00F16869 /* Margarita.png */; };
+		036ABEF71EDB203F00F16869 /* bologna sandwich.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABECB1EDB203F00F16869 /* bologna sandwich.png */; };
+		036ABEF81EDB203F00F16869 /* burger_sandwich_PNG4150.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABECC1EDB203F00F16869 /* burger_sandwich_PNG4150.png */; };
+		036ABEF91EDB203F00F16869 /* fried_chicken_PNG14107.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABECD1EDB203F00F16869 /* fried_chicken_PNG14107.png */; };
+		036ABEFA1EDB203F00F16869 /* pizza_PNG7135.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABECE1EDB203F00F16869 /* pizza_PNG7135.png */; };
+		036ABEFB1EDB203F00F16869 /* Shack-Burger-PNG-332x279.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABECF1EDB203F00F16869 /* Shack-Burger-PNG-332x279.png */; };
+		036ABEFC1EDB203F00F16869 /* Single Patty Beef Burger PNG-420x249.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABED01EDB203F00F16869 /* Single Patty Beef Burger PNG-420x249.png */; };
+		036ABEFD1EDB203F00F16869 /* alfredo pasta.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABED21EDB203F00F16869 /* alfredo pasta.png */; };
+		036ABEFE1EDB203F00F16869 /* cassoulet.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABED31EDB203F00F16869 /* cassoulet.png */; };
+		036ABEFF1EDB203F00F16869 /* confit de canard.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABED41EDB203F00F16869 /* confit de canard.png */; };
+		036ABF001EDB203F00F16869 /* french toasts.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABED51EDB203F00F16869 /* french toasts.png */; };
+		036ABF011EDB203F00F16869 /* penne pasta.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABED61EDB203F00F16869 /* penne pasta.png */; };
+		036ABF021EDB203F00F16869 /* quiche.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABED71EDB203F00F16869 /* quiche.png */; };
+		036ABF031EDB203F00F16869 /* Grilled-Chicken-Caesar-Salad-PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABED91EDB203F00F16869 /* Grilled-Chicken-Caesar-Salad-PNG.png */; };
+		036ABF041EDB203F00F16869 /* Habit-Burger-Salad-PNG-319x279.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEDA1EDB203F00F16869 /* Habit-Burger-Salad-PNG-319x279.png */; };
+		036ABF051EDB203F00F16869 /* Salad-PNG-401x279.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEDB1EDB203F00F16869 /* Salad-PNG-401x279.png */; };
+		036ABF061EDB203F00F16869 /* Salad-With-Apple-And-Bleu-Cheese-PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEDC1EDB203F00F16869 /* Salad-With-Apple-And-Bleu-Cheese-PNG.png */; };
+		036ABF071EDB203F00F16869 /* Taco-Salad-Tortilla-Bowl-PNG-289x279.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEDD1EDB203F00F16869 /* Taco-Salad-Tortilla-Bowl-PNG-289x279.png */; };
+		036ABF081EDB203F00F16869 /* Tuna-Salad-PNG-409x279.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEDE1EDB203F00F16869 /* Tuna-Salad-PNG-409x279.png */; };
 		03E015F21ED98ADD00193579 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E015F01ED98ADD00193579 /* RegisterViewController.m */; };
 		03E015F31ED98ADD00193579 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E015F11ED98ADD00193579 /* RegisterViewController.xib */; };
 		C8CB62501EA0D307001927D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CB624F1EA0D307001927D0 /* main.m */; };
@@ -85,6 +127,48 @@
 		034991771EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLeftNavigationTableViewCell.h; sourceTree = "<group>"; };
 		034991781EACF14E007DCAC7 /* CustomLeftNavigationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLeftNavigationTableViewCell.m; sourceTree = "<group>"; };
 		034991801EAD066A007DCAC7 /* CustomLeftNavigationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomLeftNavigationTableViewCell.xib; sourceTree = "<group>"; };
+		036ABEAF1EDB203F00F16869 /* cheesy breadsticks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cheesy breadsticks.png"; sourceTree = "<group>"; };
+		036ABEB01EDB203F00F16869 /* chicken nuggets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chicken nuggets.png"; sourceTree = "<group>"; };
+		036ABEB11EDB203F00F16869 /* Fortune_cookie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fortune_cookie.png; sourceTree = "<group>"; };
+		036ABEB21EDB203F00F16869 /* fried onion rings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fried onion rings.png"; sourceTree = "<group>"; };
+		036ABEB31EDB203F00F16869 /* fried shrimps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fried shrimps.png"; sourceTree = "<group>"; };
+		036ABEB41EDB203F00F16869 /* fries and sausages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fries and sausages.png"; sourceTree = "<group>"; };
+		036ABEB61EDB203F00F16869 /* chicken chowmein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chicken chowmein.png"; sourceTree = "<group>"; };
+		036ABEB71EDB203F00F16869 /* dumplings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dumplings.png; sourceTree = "<group>"; };
+		036ABEB81EDB203F00F16869 /* Hakka noodles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hakka noodles.png"; sourceTree = "<group>"; };
+		036ABEB91EDB203F00F16869 /* Kungpaochicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Kungpaochicken.png; sourceTree = "<group>"; };
+		036ABEBA1EDB203F00F16869 /* prawn soup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prawn soup.png"; sourceTree = "<group>"; };
+		036ABEBB1EDB203F00F16869 /* sushi rols.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sushi rols.png"; sourceTree = "<group>"; };
+		036ABEBD1EDB203F00F16869 /* bakhlawa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bakhlawa.png; sourceTree = "<group>"; };
+		036ABEBE1EDB203F00F16869 /* lemon tart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lemon tart.png"; sourceTree = "<group>"; };
+		036ABEBF1EDB203F00F16869 /* mini_lava_cake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mini_lava_cake.png; sourceTree = "<group>"; };
+		036ABEC01EDB203F00F16869 /* strawberry cheesecke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "strawberry cheesecke.png"; sourceTree = "<group>"; };
+		036ABEC11EDB203F00F16869 /* sundae-529x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sundae-529x1024.png"; sourceTree = "<group>"; };
+		036ABEC21EDB203F00F16869 /* waffle with ice cream.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "waffle with ice cream.png"; sourceTree = "<group>"; };
+		036ABEC41EDB203F00F16869 /* Black Mamba.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Black Mamba.png"; sourceTree = "<group>"; };
+		036ABEC51EDB203F00F16869 /* Cocacola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cocacola.png; sourceTree = "<group>"; };
+		036ABEC61EDB203F00F16869 /* Drink-PNG-180x180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Drink-PNG-180x180.png"; sourceTree = "<group>"; };
+		036ABEC71EDB203F00F16869 /* Drink-PNG-8-180x180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Drink-PNG-8-180x180.png"; sourceTree = "<group>"; };
+		036ABEC81EDB203F00F16869 /* Lemonade 180x180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lemonade 180x180.png"; sourceTree = "<group>"; };
+		036ABEC91EDB203F00F16869 /* Margarita.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Margarita.png; sourceTree = "<group>"; };
+		036ABECB1EDB203F00F16869 /* bologna sandwich.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bologna sandwich.png"; sourceTree = "<group>"; };
+		036ABECC1EDB203F00F16869 /* burger_sandwich_PNG4150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burger_sandwich_PNG4150.png; sourceTree = "<group>"; };
+		036ABECD1EDB203F00F16869 /* fried_chicken_PNG14107.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fried_chicken_PNG14107.png; sourceTree = "<group>"; };
+		036ABECE1EDB203F00F16869 /* pizza_PNG7135.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza_PNG7135.png; sourceTree = "<group>"; };
+		036ABECF1EDB203F00F16869 /* Shack-Burger-PNG-332x279.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shack-Burger-PNG-332x279.png"; sourceTree = "<group>"; };
+		036ABED01EDB203F00F16869 /* Single Patty Beef Burger PNG-420x249.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Single Patty Beef Burger PNG-420x249.png"; sourceTree = "<group>"; };
+		036ABED21EDB203F00F16869 /* alfredo pasta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alfredo pasta.png"; sourceTree = "<group>"; };
+		036ABED31EDB203F00F16869 /* cassoulet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cassoulet.png; sourceTree = "<group>"; };
+		036ABED41EDB203F00F16869 /* confit de canard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "confit de canard.png"; sourceTree = "<group>"; };
+		036ABED51EDB203F00F16869 /* french toasts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "french toasts.png"; sourceTree = "<group>"; };
+		036ABED61EDB203F00F16869 /* penne pasta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "penne pasta.png"; sourceTree = "<group>"; };
+		036ABED71EDB203F00F16869 /* quiche.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quiche.png; sourceTree = "<group>"; };
+		036ABED91EDB203F00F16869 /* Grilled-Chicken-Caesar-Salad-PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Grilled-Chicken-Caesar-Salad-PNG.png"; sourceTree = "<group>"; };
+		036ABEDA1EDB203F00F16869 /* Habit-Burger-Salad-PNG-319x279.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Habit-Burger-Salad-PNG-319x279.png"; sourceTree = "<group>"; };
+		036ABEDB1EDB203F00F16869 /* Salad-PNG-401x279.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Salad-PNG-401x279.png"; sourceTree = "<group>"; };
+		036ABEDC1EDB203F00F16869 /* Salad-With-Apple-And-Bleu-Cheese-PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Salad-With-Apple-And-Bleu-Cheese-PNG.png"; sourceTree = "<group>"; };
+		036ABEDD1EDB203F00F16869 /* Taco-Salad-Tortilla-Bowl-PNG-289x279.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Taco-Salad-Tortilla-Bowl-PNG-289x279.png"; sourceTree = "<group>"; };
+		036ABEDE1EDB203F00F16869 /* Tuna-Salad-PNG-409x279.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tuna-Salad-PNG-409x279.png"; sourceTree = "<group>"; };
 		03E015EF1ED98ADD00193579 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		03E015F01ED98ADD00193579 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		03E015F11ED98ADD00193579 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -167,6 +251,111 @@
 			children = (
 			);
 			path = "Segoe UI";
+			sourceTree = "<group>";
+		};
+		036ABEAD1EDB203F00F16869 /* Food Images */ = {
+			isa = PBXGroup;
+			children = (
+				036ABEAE1EDB203F00F16869 /* Appetizers */,
+				036ABEB51EDB203F00F16869 /* Chinese */,
+				036ABEBC1EDB203F00F16869 /* Desserts */,
+				036ABEC31EDB203F00F16869 /* Drinks */,
+				036ABECA1EDB203F00F16869 /* Fast food */,
+				036ABED11EDB203F00F16869 /* french */,
+				036ABED81EDB203F00F16869 /* Salads */,
+			);
+			path = "Food Images";
+			sourceTree = "<group>";
+		};
+		036ABEAE1EDB203F00F16869 /* Appetizers */ = {
+			isa = PBXGroup;
+			children = (
+				036ABEAF1EDB203F00F16869 /* cheesy breadsticks.png */,
+				036ABEB01EDB203F00F16869 /* chicken nuggets.png */,
+				036ABEB11EDB203F00F16869 /* Fortune_cookie.png */,
+				036ABEB21EDB203F00F16869 /* fried onion rings.png */,
+				036ABEB31EDB203F00F16869 /* fried shrimps.png */,
+				036ABEB41EDB203F00F16869 /* fries and sausages.png */,
+			);
+			path = Appetizers;
+			sourceTree = "<group>";
+		};
+		036ABEB51EDB203F00F16869 /* Chinese */ = {
+			isa = PBXGroup;
+			children = (
+				036ABEB61EDB203F00F16869 /* chicken chowmein.png */,
+				036ABEB71EDB203F00F16869 /* dumplings.png */,
+				036ABEB81EDB203F00F16869 /* Hakka noodles.png */,
+				036ABEB91EDB203F00F16869 /* Kungpaochicken.png */,
+				036ABEBA1EDB203F00F16869 /* prawn soup.png */,
+				036ABEBB1EDB203F00F16869 /* sushi rols.png */,
+			);
+			path = Chinese;
+			sourceTree = "<group>";
+		};
+		036ABEBC1EDB203F00F16869 /* Desserts */ = {
+			isa = PBXGroup;
+			children = (
+				036ABEBD1EDB203F00F16869 /* bakhlawa.png */,
+				036ABEBE1EDB203F00F16869 /* lemon tart.png */,
+				036ABEBF1EDB203F00F16869 /* mini_lava_cake.png */,
+				036ABEC01EDB203F00F16869 /* strawberry cheesecke.png */,
+				036ABEC11EDB203F00F16869 /* sundae-529x1024.png */,
+				036ABEC21EDB203F00F16869 /* waffle with ice cream.png */,
+			);
+			path = Desserts;
+			sourceTree = "<group>";
+		};
+		036ABEC31EDB203F00F16869 /* Drinks */ = {
+			isa = PBXGroup;
+			children = (
+				036ABEC41EDB203F00F16869 /* Black Mamba.png */,
+				036ABEC51EDB203F00F16869 /* Cocacola.png */,
+				036ABEC61EDB203F00F16869 /* Drink-PNG-180x180.png */,
+				036ABEC71EDB203F00F16869 /* Drink-PNG-8-180x180.png */,
+				036ABEC81EDB203F00F16869 /* Lemonade 180x180.png */,
+				036ABEC91EDB203F00F16869 /* Margarita.png */,
+			);
+			path = Drinks;
+			sourceTree = "<group>";
+		};
+		036ABECA1EDB203F00F16869 /* Fast food */ = {
+			isa = PBXGroup;
+			children = (
+				036ABECB1EDB203F00F16869 /* bologna sandwich.png */,
+				036ABECC1EDB203F00F16869 /* burger_sandwich_PNG4150.png */,
+				036ABECD1EDB203F00F16869 /* fried_chicken_PNG14107.png */,
+				036ABECE1EDB203F00F16869 /* pizza_PNG7135.png */,
+				036ABECF1EDB203F00F16869 /* Shack-Burger-PNG-332x279.png */,
+				036ABED01EDB203F00F16869 /* Single Patty Beef Burger PNG-420x249.png */,
+			);
+			path = "Fast food";
+			sourceTree = "<group>";
+		};
+		036ABED11EDB203F00F16869 /* french */ = {
+			isa = PBXGroup;
+			children = (
+				036ABED21EDB203F00F16869 /* alfredo pasta.png */,
+				036ABED31EDB203F00F16869 /* cassoulet.png */,
+				036ABED41EDB203F00F16869 /* confit de canard.png */,
+				036ABED51EDB203F00F16869 /* french toasts.png */,
+				036ABED61EDB203F00F16869 /* penne pasta.png */,
+				036ABED71EDB203F00F16869 /* quiche.png */,
+			);
+			path = french;
+			sourceTree = "<group>";
+		};
+		036ABED81EDB203F00F16869 /* Salads */ = {
+			isa = PBXGroup;
+			children = (
+				036ABED91EDB203F00F16869 /* Grilled-Chicken-Caesar-Salad-PNG.png */,
+				036ABEDA1EDB203F00F16869 /* Habit-Burger-Salad-PNG-319x279.png */,
+				036ABEDB1EDB203F00F16869 /* Salad-PNG-401x279.png */,
+				036ABEDC1EDB203F00F16869 /* Salad-With-Apple-And-Bleu-Cheese-PNG.png */,
+				036ABEDD1EDB203F00F16869 /* Taco-Salad-Tortilla-Bowl-PNG-289x279.png */,
+				036ABEDE1EDB203F00F16869 /* Tuna-Salad-PNG-409x279.png */,
+			);
+			path = Salads;
 			sourceTree = "<group>";
 		};
 		03E015EB1ED9852C00193579 /* Login Page */ = {
@@ -261,6 +450,7 @@
 		C8CB624E1EA0D307001927D0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				036ABEAD1EDB203F00F16869 /* Food Images */,
 				0304F1DE1EAA784F003ADE3F /* SWRevealViewController */,
 				0305D1C91EA9FA7100D6DC45 /* Fonts */,
 				0305D1E51EAA0BD800D6DC45 /* iphone_body_bg@2x.png */,
@@ -344,30 +534,72 @@
 			buildActionMask = 2147483647;
 			files = (
 				0305D1D41EA9FA7100D6DC45 /* btn_done_normal@2x.png in Resources */,
+				036ABF011EDB203F00F16869 /* penne pasta.png in Resources */,
+				036ABEE81EDB203F00F16869 /* Kungpaochicken.png in Resources */,
 				03E015F31ED98ADD00193579 /* RegisterViewController.xib in Resources */,
+				036ABEE71EDB203F00F16869 /* Hakka noodles.png in Resources */,
+				036ABEEA1EDB203F00F16869 /* sushi rols.png in Resources */,
 				0305D1D81EA9FA7100D6DC45 /* btn_right_nav_normal@2x.png in Resources */,
 				0305D1ED1EAA10AD00D6DC45 /* Menu_Category.jpg in Resources */,
+				036ABEE21EDB203F00F16869 /* fried onion rings.png in Resources */,
 				0305D1E01EA9FA7100D6DC45 /* Menu.jpg in Resources */,
 				0305D1D61EA9FA7100D6DC45 /* btn_left_nav_normal@2x.png in Resources */,
 				0305D1D71EA9FA7100D6DC45 /* btn_left_nav_pressed@2x.png in Resources */,
+				036ABF061EDB203F00F16869 /* Salad-With-Apple-And-Bleu-Cheese-PNG.png in Resources */,
+				036ABEEC1EDB203F00F16869 /* lemon tart.png in Resources */,
+				036ABEFF1EDB203F00F16869 /* confit de canard.png in Resources */,
 				0305D1DC1EA9FA7100D6DC45 /* category_header.png in Resources */,
 				0305D1E61EAA0BD800D6DC45 /* iphone_body_bg@2x.png in Resources */,
+				036ABF021EDB203F00F16869 /* quiche.png in Resources */,
+				036ABEF01EDB203F00F16869 /* waffle with ice cream.png in Resources */,
+				036ABEF61EDB203F00F16869 /* Margarita.png in Resources */,
+				036ABEF91EDB203F00F16869 /* fried_chicken_PNG14107.png in Resources */,
+				036ABEFC1EDB203F00F16869 /* Single Patty Beef Burger PNG-420x249.png in Resources */,
+				036ABEFD1EDB203F00F16869 /* alfredo pasta.png in Resources */,
+				036ABF071EDB203F00F16869 /* Taco-Salad-Tortilla-Bowl-PNG-289x279.png in Resources */,
+				036ABEF71EDB203F00F16869 /* bologna sandwich.png in Resources */,
+				036ABEF81EDB203F00F16869 /* burger_sandwich_PNG4150.png in Resources */,
 				031D02D21EA7F7B600045B93 /* MainMenuSubViewViewController.xib in Resources */,
 				0305D1DA1EA9FA7100D6DC45 /* category_bg@2x.png in Resources */,
+				036ABEED1EDB203F00F16869 /* mini_lava_cake.png in Resources */,
+				036ABF051EDB203F00F16869 /* Salad-PNG-401x279.png in Resources */,
 				0305D1E11EA9FA7100D6DC45 /* splash.jpg in Resources */,
 				0305D1D51EA9FA7100D6DC45 /* btn_done_pressed@2x.png in Resources */,
 				C8CB62611EA0D307001927D0 /* LaunchScreen.storyboard in Resources */,
+				036ABF031EDB203F00F16869 /* Grilled-Chicken-Caesar-Salad-PNG.png in Resources */,
 				031BDC321EA21BFE0010E93B /* LoginController.xib in Resources */,
+				036ABEE01EDB203F00F16869 /* chicken nuggets.png in Resources */,
+				036ABEF31EDB203F00F16869 /* Drink-PNG-180x180.png in Resources */,
+				036ABF001EDB203F00F16869 /* french toasts.png in Resources */,
 				0305D1DB1EA9FA7100D6DC45 /* category_bg33.png in Resources */,
+				036ABEE41EDB203F00F16869 /* fries and sausages.png in Resources */,
+				036ABEEE1EDB203F00F16869 /* strawberry cheesecke.png in Resources */,
+				036ABEEB1EDB203F00F16869 /* bakhlawa.png in Resources */,
+				036ABF041EDB203F00F16869 /* Habit-Burger-Salad-PNG-319x279.png in Resources */,
+				036ABEE31EDB203F00F16869 /* fried shrimps.png in Resources */,
+				036ABEF41EDB203F00F16869 /* Drink-PNG-8-180x180.png in Resources */,
+				036ABF081EDB203F00F16869 /* Tuna-Salad-PNG-409x279.png in Resources */,
 				034991811EAD066A007DCAC7 /* CustomLeftNavigationTableViewCell.xib in Resources */,
 				031BDC431EA28E520010E93B /* SplashScreenViewController.xib in Resources */,
+				036ABEE91EDB203F00F16869 /* prawn soup.png in Resources */,
+				036ABEFE1EDB203F00F16869 /* cassoulet.png in Resources */,
+				036ABEEF1EDB203F00F16869 /* sundae-529x1024.png in Resources */,
+				036ABEE51EDB203F00F16869 /* chicken chowmein.png in Resources */,
+				036ABEF11EDB203F00F16869 /* Black Mamba.png in Resources */,
 				0305D1DE1EA9FA7100D6DC45 /* iphone_sub-heading-bar_smaller@2x.png in Resources */,
 				0305D1E41EAA0AEF00D6DC45 /* Side-Nav.jpg in Resources */,
+				036ABEFA1EDB203F00F16869 /* pizza_PNG7135.png in Resources */,
+				036ABEF51EDB203F00F16869 /* Lemonade 180x180.png in Resources */,
+				036ABEE11EDB203F00F16869 /* Fortune_cookie.png in Resources */,
 				0305D1DD1EA9FA7100D6DC45 /* iphone_left_navigation_bg@2x.png in Resources */,
+				036ABEF21EDB203F00F16869 /* Cocacola.png in Resources */,
 				C8CB625E1EA0D307001927D0 /* Assets.xcassets in Resources */,
+				036ABEFB1EDB203F00F16869 /* Shack-Burger-PNG-332x279.png in Resources */,
+				036ABEE61EDB203F00F16869 /* dumplings.png in Resources */,
 				0305D1DF1EA9FA7100D6DC45 /* iphone_top_bar_bg@2x.png in Resources */,
 				0305D1E21EA9FA7100D6DC45 /* sub-heading-bar_small@2x.png in Resources */,
 				0305D1D91EA9FA7100D6DC45 /* btn_right_nav_pressed@2x.png in Resources */,
+				036ABEDF1EDB203F00F16869 /* cheesy breadsticks.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

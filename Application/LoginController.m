@@ -59,10 +59,6 @@
     NSString *inputUsername = [[NSString alloc] initWithString:usernameField.text];
     NSString *inputPassword = [[NSString alloc] initWithString:passwordField.text];
     
-    //Admin login credentials
-    NSString *adminUsername = @"admin";
-    NSString *adminPassword = @"admin";
-    
     NSArray *allCustomers = [self fetchCustomerData];
     
     BOOL matchfound = NO;
@@ -149,9 +145,7 @@
 }
 
 
--(void)registerAccount {
-    NSLog(@"Pushing");
-    
+- (void)registerAccount {
     RegisterViewController *frontView = [[RegisterViewController alloc]
                                          initWithNibName:@"RegisterViewController"
                                          bundle:nil];
@@ -160,7 +154,7 @@
 
 }
 
--(void)goToMainMenu {
+- (void)goToMainMenu {
     MainMenuSubViewViewController *frontView = [[MainMenuSubViewViewController alloc]
                                                 initWithNibName:@"MainMenuSubViewViewController"
                                                 bundle:[NSBundle mainBundle]];
