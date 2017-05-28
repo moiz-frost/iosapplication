@@ -22,10 +22,7 @@
 
 #pragma mark - LeftNavigationMenuProtocolMethods
 
-- (void)cellClicked:(NSString*)cellLabelValue;
-
-
-
+- (void)cellClicked:(NSString*)cellLabelValue withImages:(NSArray*)imageList;
 
 
 @end

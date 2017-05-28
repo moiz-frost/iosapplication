@@ -10,6 +10,15 @@
 
 
 @synthesize menuList;
+@synthesize sideMenuListImages;
+
+@synthesize appetizersImages;
+@synthesize chineseImages;
+@synthesize dessertsImages;
+@synthesize drinksImages;
+@synthesize fastFoodImages;
+@synthesize frenchImages;
+@synthesize saladImages;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -18,15 +27,75 @@
     self.tableView.backgroundView = [[UIImageView alloc]
                                      initWithImage:[UIImage imageNamed:@"iphone_body_bg@2x.png"]];
     
-//    [self.tableView registerClass:[CustomLeftNavigationTableViewCell class]
-//           forCellReuseIdentifier:[CustomLeftNavigationTableViewCell cellIdentifier]];
-    
     [self.tableView
      registerNib:[UINib nibWithNibName:@"CustomLeftNavigationTableViewCell"
                                 bundle:[NSBundle mainBundle]]
      forCellReuseIdentifier:[CustomLeftNavigationTableViewCell cellIdentifier]];
     
-    menuList = @[@"Drinks", @"Desserts", @"Starter", @"Chinese", @"French", @"Fast Food", @"Salad"];
+    menuList = @[@"Appetizers",
+                 @"Chinese",
+                 @"Desserts",
+                 @"Drinks",
+                 @"Fast Food",
+                 @"French",
+                 @"Salads"];
+    
+    sideMenuListImages = @[@"cheesy breadsticks.png",
+                           @"chicken chowmein.png",
+                           @"bakhlawa.png",
+                           @"Black Mamba.png",
+                           @"Shack-Burger-PNG-332x279.png",
+                           @"french toasts.png",
+                           @"Salad-With-Apple-And-Bleu-Cheese-PNG.png"];
+    
+    appetizersImages = @[@"cheesy breadsticks.png",
+                         @"chicken nuggets.png",
+                         @"Fortune_cookie.png",
+                         @"fried onion rings.png",
+                         @"fried shrimps.png",
+                         @"fries and sausages.png"];
+    
+    chineseImages = @[@"chicken chowmein.png",
+                      @"dumplings.png",
+                      @"Hakka noodles.png",
+                      @"Kungpaochicken",
+                      @"prawn soup.png",
+                      @"sushi rols.png"];
+    
+    dessertsImages = @[@"bakhlawa.png",
+                       @"lemon tart.png",
+                       @"mini_lava_cake.png",
+                       @"strawberry cheesecke.png",
+                       @"sundae-529x1024.png",
+                       @"waffle with ice cream.png"];
+    
+    drinksImages = @[@"Black Mamba.png",
+                     @"Cocacola.png",
+                     @"Drink-PNG-180x180.png",
+                     @"Drink-PNG-8-180x180.png",
+                     @"Lemonade 180x180.png",
+                     @"Margarita.png"];
+    
+    fastFoodImages = @[@"bologna sandwich.png",
+                       @"burger_sandwich_PNG4150.png",
+                       @"fried_chicken_PNG14107.png",
+                       @"pizza_PNG7135.png",
+                       @"Shack-Burger-PNG-332x279.png",
+                       @"Single Patty Beef Burger PNG-420x249.png"];
+    
+    frenchImages = @[@"alfredo pasta.png",
+                     @"cassoulet.png",
+                     @"confit de canard.png",
+                     @"french toasts.png",
+                     @"penne pasta.png",
+                     @"quiche.png"];
+    
+    saladImages = @[@"Grilled-Chicken-Caesar-Salad-PNG.png",
+                    @"Habit-Burger-Salad-PNG-319x279.png",
+                    @"Salad-PNG-401x279.png",
+                    @"Salad-With-Apple-And-Bleu-Cheese-PNG.png",
+                    @"Taco-Salad-Tortilla-Bowl-PNG-289x279.png",
+                    @"Tuna-Salad-PNG-409x279.png"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -71,15 +140,16 @@
     }
 
     cell.categoryName.text = [menuList objectAtIndex:indexPath.row];
-    cell.categoryImage.image = [UIImage imageNamed:@"btn_done_normal@2x.png"];
+    cell.categoryImage.image = [UIImage imageNamed:[sideMenuListImages objectAtIndex:indexPath.row]];
     
     return cell;
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 40;
+    return 70;
 }
+
 /*
  // Override to support conditional editing of the table view.
  - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -119,7 +189,42 @@
  
  // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
  - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-     [self.delegate cellClicked:menuList[indexPath.row]];
+     NSString *menuSelection = menuList[indexPath.row];
+     NSArray *menuImages;
+     
+     if ([menuSelection isEqualToString:@"Appetizers"]) {
+         menuImages = appetizersImages;
+     }
+     
+     else if ([menuSelection isEqualToString:@"Chinese"]) {
+         menuImages = chineseImages;
+     }
+     
+     else if ([menuSelection isEqualToString:@"Desserts"]) {
+         menuImages = dessertsImages;
+     }
+     
+     else if ([menuSelection isEqualToString:@"Drinks"]) {
+         menuImages = drinksImages;
+     }
+     
+     else if ([menuSelection isEqualToString:@"Fast Food"]) {
+         menuImages = fastFoodImages;
+     }
+     
+     else if ([menuSelection isEqualToString:@"French"]) {
+         menuImages = frenchImages;
+     }
+     
+     else if ([menuSelection isEqualToString:@"Salads"]) {
+         menuImages = saladImages;
+     }
+     
+     else {
+         return;
+     }
+     
+     [self.delegate cellClicked:menuSelection withImages:menuImages];
  }
  
 

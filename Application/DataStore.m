@@ -43,8 +43,8 @@
         NSURL *dataStoreURL = [FileSystemHelper pathForDocumentsFile:@"datastore.sqlite"];
         
         // start with a clean slate each time the app starts
-        [[NSFileManager defaultManager] removeItemAtURL:dataStoreURL
-                                                  error:nil];
+//        [[NSFileManager defaultManager] removeItemAtURL:dataStoreURL
+//                                                  error:nil];
         
         NSError *error = nil;
         if (![psc addPersistentStoreWithType:NSSQLiteStoreType

@@ -114,8 +114,16 @@
 
 #pragma mark - LeftNavigationMenuProtocolMethods
 
-- (void)cellClicked:(NSString*)cellLabelValue {
-    self.menuSubHeading.text = cellLabelValue;
+- (void)cellClicked:(NSString*)cellLabelValue withImages:(NSArray *)imageList{
+    menuSubHeading.text = cellLabelValue;
+    
+    image1.image = [UIImage imageNamed:[imageList objectAtIndex:0]];
+    image2.image = [UIImage imageNamed:[imageList objectAtIndex:1]];
+    image3.image = [UIImage imageNamed:[imageList objectAtIndex:2]];
+    image4.image = [UIImage imageNamed:[imageList objectAtIndex:3]];
+    image5.image = [UIImage imageNamed:[imageList objectAtIndex:4]];
+    image6.image = [UIImage imageNamed:[imageList objectAtIndex:5]];
+    
     [revealController revealToggleAnimated:YES];
 }
 

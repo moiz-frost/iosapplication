@@ -260,8 +260,8 @@
 				036ABEB51EDB203F00F16869 /* Chinese */,
 				036ABEBC1EDB203F00F16869 /* Desserts */,
 				036ABEC31EDB203F00F16869 /* Drinks */,
-				036ABECA1EDB203F00F16869 /* Fast food */,
-				036ABED11EDB203F00F16869 /* french */,
+				036ABECA1EDB203F00F16869 /* Fast Food */,
+				036ABED11EDB203F00F16869 /* French */,
 				036ABED81EDB203F00F16869 /* Salads */,
 			);
 			path = "Food Images";
@@ -319,7 +319,7 @@
 			path = Drinks;
 			sourceTree = "<group>";
 		};
-		036ABECA1EDB203F00F16869 /* Fast food */ = {
+		036ABECA1EDB203F00F16869 /* Fast Food */ = {
 			isa = PBXGroup;
 			children = (
 				036ABECB1EDB203F00F16869 /* bologna sandwich.png */,
@@ -329,10 +329,11 @@
 				036ABECF1EDB203F00F16869 /* Shack-Burger-PNG-332x279.png */,
 				036ABED01EDB203F00F16869 /* Single Patty Beef Burger PNG-420x249.png */,
 			);
+			name = "Fast Food";
 			path = "Fast food";
 			sourceTree = "<group>";
 		};
-		036ABED11EDB203F00F16869 /* french */ = {
+		036ABED11EDB203F00F16869 /* French */ = {
 			isa = PBXGroup;
 			children = (
 				036ABED21EDB203F00F16869 /* alfredo pasta.png */,
@@ -342,6 +343,7 @@
 				036ABED61EDB203F00F16869 /* penne pasta.png */,
 				036ABED71EDB203F00F16869 /* quiche.png */,
 			);
+			name = French;
 			path = french;
 			sourceTree = "<group>";
 		};
