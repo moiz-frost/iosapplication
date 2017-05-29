@@ -1,26 +1,28 @@
-#import "CustomLeftNavigationTableViewCell.h"
+//
+//  RightTableViewCell.m
+//  Application
+//
+//  Created by Abdul Moiz on 29/05/2017.
+//  Copyright © 2017 2plebs. All rights reserved.
+//
 
-@implementation CustomLeftNavigationTableViewCell
+#import "RightTableViewCell.h"
 
-@synthesize categoryImage;
-@synthesize categoryName;
+@implementation RightTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
 }
 
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-  
-    
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
 }
 
 + (NSString*)cellIdentifier{
-    static NSString *cellIdentifier = @"MenuItem";
+    static NSString *cellIdentifier = @"CartItem";
     return cellIdentifier;
 }
 

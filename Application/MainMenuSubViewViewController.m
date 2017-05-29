@@ -1,5 +1,6 @@
 #import "MainMenuSubViewViewController.h"
 #import "LeftNavigationMenu.h"
+#import "RightCartTableViewController.h"
 
 @interface MainMenuSubViewViewController () <LeftNavigatioNMenuProtocol>
 
@@ -24,11 +25,17 @@
     
     UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearView];
     
+    RightCartTableViewController *rightView = [[RightCartTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    
+    UINavigationController *rightNavigationController = [[UINavigationController alloc] initWithRootViewController:rightView];
+    
     rearView.delegate = self;
     
     revealController = [self revealViewController];
     
     revealController.rearViewController = rearNavigationController;
+    
+    revealController.rightViewController = rightNavigationController;
     
     [revealController panGestureRecognizer];
     [revealController tapGestureRecognizer];
@@ -117,12 +124,23 @@
 - (void)cellClicked:(NSString*)cellLabelValue withImages:(NSArray *)imageList{
     menuSubHeading.text = cellLabelValue;
     
-    image1.image = [UIImage imageNamed:[imageList objectAtIndex:0]];
-    image2.image = [UIImage imageNamed:[imageList objectAtIndex:1]];
-    image3.image = [UIImage imageNamed:[imageList objectAtIndex:2]];
-    image4.image = [UIImage imageNamed:[imageList objectAtIndex:3]];
-    image5.image = [UIImage imageNamed:[imageList objectAtIndex:4]];
-    image6.image = [UIImage imageNamed:[imageList objectAtIndex:5]];
+//    image1.imageName = imageList[0];
+    image1.image = [UIImage imageNamed:imageList[0]];
+    
+//    image2.imageName = imageList[1];
+    image2.image = [UIImage imageNamed:imageList[1]];
+    
+//    image3.imageName = imageList[2];
+    image3.image = [UIImage imageNamed:imageList[2]];
+    
+//    image4.imageName = imageList[3];
+    image4.image = [UIImage imageNamed:imageList[3]];
+    
+//    image5.imageName = imageList[4];
+    image5.image = [UIImage imageNamed:imageList[4]];
+    
+//    image6.imageName = imageList[5];
+    image6.image = [UIImage imageNamed:imageList[5]];
     
     [revealController revealToggleAnimated:YES];
 }

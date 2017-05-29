@@ -81,6 +81,10 @@
 		036ABF081EDB203F00F16869 /* Tuna-Salad-PNG-409x279.png in Resources */ = {isa = PBXBuildFile; fileRef = 036ABEDE1EDB203F00F16869 /* Tuna-Salad-PNG-409x279.png */; };
 		03E015F21ED98ADD00193579 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E015F01ED98ADD00193579 /* RegisterViewController.m */; };
 		03E015F31ED98ADD00193579 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E015F11ED98ADD00193579 /* RegisterViewController.xib */; };
+		03E7B3851EDBDDB0006B70EC /* RightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E7B3831EDBDDB0006B70EC /* RightTableViewCell.m */; };
+		03E7B3861EDBDDB0006B70EC /* RightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E7B3841EDBDDB0006B70EC /* RightTableViewCell.xib */; };
+		03E7B3891EDBDE01006B70EC /* RightCartTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E7B3881EDBDE01006B70EC /* RightCartTableViewController.m */; };
+		03E7B38C1EDBE279006B70EC /* CustomImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E7B38B1EDBE279006B70EC /* CustomImageView.m */; };
 		C8CB62501EA0D307001927D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CB624F1EA0D307001927D0 /* main.m */; };
 		C8CB62531EA0D307001927D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CB62521EA0D307001927D0 /* AppDelegate.m */; };
 		C8CB625C1EA0D307001927D0 /* Application.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8CB625A1EA0D307001927D0 /* Application.xcdatamodeld */; };
@@ -172,6 +176,13 @@
 		03E015EF1ED98ADD00193579 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		03E015F01ED98ADD00193579 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		03E015F11ED98ADD00193579 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		03E7B3821EDBDDB0006B70EC /* RightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightTableViewCell.h; sourceTree = "<group>"; };
+		03E7B3831EDBDDB0006B70EC /* RightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightTableViewCell.m; sourceTree = "<group>"; };
+		03E7B3841EDBDDB0006B70EC /* RightTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightTableViewCell.xib; sourceTree = "<group>"; };
+		03E7B3871EDBDE01006B70EC /* RightCartTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightCartTableViewController.h; sourceTree = "<group>"; };
+		03E7B3881EDBDE01006B70EC /* RightCartTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightCartTableViewController.m; sourceTree = "<group>"; };
+		03E7B38A1EDBE279006B70EC /* CustomImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomImageView.h; sourceTree = "<group>"; };
+		03E7B38B1EDBE279006B70EC /* CustomImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImageView.m; sourceTree = "<group>"; };
 		C8CB624B1EA0D307001927D0 /* Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Application.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8CB624F1EA0D307001927D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C8CB62511EA0D307001927D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -386,6 +397,8 @@
 				031D02CE1EA7F7B600045B93 /* MainMenuSubViewViewController.h */,
 				031D02CF1EA7F7B600045B93 /* MainMenuSubViewViewController.m */,
 				031D02D01EA7F7B600045B93 /* MainMenuSubViewViewController.xib */,
+				03E7B38A1EDBE279006B70EC /* CustomImageView.h */,
+				03E7B38B1EDBE279006B70EC /* CustomImageView.m */,
 			);
 			name = "Main Menu";
 			sourceTree = "<group>";
@@ -410,6 +423,18 @@
 				03E015F11ED98ADD00193579 /* RegisterViewController.xib */,
 			);
 			name = "Register Page";
+			sourceTree = "<group>";
+		};
+		03E7B3811EDBDBC5006B70EC /* RIght Navigation Cart */ = {
+			isa = PBXGroup;
+			children = (
+				03E7B3821EDBDDB0006B70EC /* RightTableViewCell.h */,
+				03E7B3831EDBDDB0006B70EC /* RightTableViewCell.m */,
+				03E7B3841EDBDDB0006B70EC /* RightTableViewCell.xib */,
+				03E7B3871EDBDE01006B70EC /* RightCartTableViewController.h */,
+				03E7B3881EDBDE01006B70EC /* RightCartTableViewController.m */,
+			);
+			name = "RIght Navigation Cart";
 			sourceTree = "<group>";
 		};
 		C8CB62421EA0D307001927D0 = {
@@ -445,6 +470,7 @@
 				03E015EE1ED9855F00193579 /* Left Side Navigation */,
 				C8CB624C1EA0D307001927D0 /* Products */,
 				03E015F41ED98AE100193579 /* Register Page */,
+				03E7B3811EDBDBC5006B70EC /* RIght Navigation Cart */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -550,6 +576,7 @@
 				036ABF061EDB203F00F16869 /* Salad-With-Apple-And-Bleu-Cheese-PNG.png in Resources */,
 				036ABEEC1EDB203F00F16869 /* lemon tart.png in Resources */,
 				036ABEFF1EDB203F00F16869 /* confit de canard.png in Resources */,
+				03E7B3861EDBDDB0006B70EC /* RightTableViewCell.xib in Resources */,
 				0305D1DC1EA9FA7100D6DC45 /* category_header.png in Resources */,
 				0305D1E61EAA0BD800D6DC45 /* iphone_body_bg@2x.png in Resources */,
 				036ABF021EDB203F00F16869 /* quiche.png in Resources */,
@@ -616,6 +643,8 @@
 				0305D1B51EA9E06D00D6DC45 /* DataStore.m in Sources */,
 				0301A3A81EDA4920008F548B /* FileSystemHelper.m in Sources */,
 				C8CB625C1EA0D307001927D0 /* Application.xcdatamodeld in Sources */,
+				03E7B3851EDBDDB0006B70EC /* RightTableViewCell.m in Sources */,
+				03E7B38C1EDBE279006B70EC /* CustomImageView.m in Sources */,
 				C8CB62531EA0D307001927D0 /* AppDelegate.m in Sources */,
 				031BDC421EA28E520010E93B /* SplashScreenViewController.m in Sources */,
 				031BDC311EA21BFE0010E93B /* LoginController.m in Sources */,
@@ -623,6 +652,7 @@
 				0304F1E11EAA784F003ADE3F /* SWRevealViewController.m in Sources */,
 				031D02D11EA7F7B600045B93 /* MainMenuSubViewViewController.m in Sources */,
 				C8CB62501EA0D307001927D0 /* main.m in Sources */,
+				03E7B3891EDBDE01006B70EC /* RightCartTableViewController.m in Sources */,
 				0305D1F01EAA18F100D6DC45 /* LeftNavigationMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
